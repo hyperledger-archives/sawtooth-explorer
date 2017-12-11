@@ -1,0 +1,74 @@
+<!--
+  Copyright 2017 PokitDok, Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<div class="well" *ngIf="data.header">
+  <dl class="horizontal">
+    <dt>Family</dt>
+    <dd>{{ data.header.family_name }}, v{{ data.header.family_version }}</dd>
+
+    <dt>Signer Public Key</dt>
+    <dd><a routerLink="/wallet">{{ data.header.signer_pubkey || '-' }}</a></dd>
+
+    <dt>Batcher Public Key</dt>
+    <dd><a routerLink="/wallet">{{ data.header.batcher_pubkey || '-' }}</a></dd>
+
+    <dt>Nonce</dt>
+    <dd>{{ data.header.nonce || '-' }}</dd>
+  </dl>
+</div>
+
+<hr/>
+
+<div class="row" *ngIf="data.header && (data.header.inputs || data.header.outputs)">
+  <div class="six columns">
+    <h3 class="h3">Inputs</h3>
+    <ul class="input-output-list">
+      <li *ngFor="let input of data.header.inputs" class="ellipsis">
+        <a routerLink="/state-monitor">{{ input }}</a><br/>
+      </li>
+    </ul>
+  </div>
+  <div class="six columns">
+  <h3 class="h3">Outputs</h3>
+    <ul class="input-output-list">
+      <li *ngFor="let output of data.header.outputs" class="ellipsis">
+        <a routerLink="/state-monitor">{{ output }}</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<ng-container *ngIf="data.header && (data.header.dependencies && data.header.dependencies.length)">
+  <hr/>
+  <h3 class="h3">Dependencies</h3>
+  <ul class="dependencies-list">
+    <li *ngFor="let dependency of data.header.dependencies" class="ellipsis">
+      <a [routerLink]="'/transactions/' + dependency">{{ dependency }}</a><br/>
+    </li>
+  </ul>
+</ng-container>
+
+<hr/>
+
+<h3 class="h3">Payload</h3>
+
+<div ace-editor
+   [text]="payloadJSON"
+   [mode]="aceMode"
+   [theme]="'twilight'"
+   [options]="aceOptions"
+   [readOnly]="false"
+   class="ace-editor"></div>

@@ -1,0 +1,7 @@
+{
+  "error": {
+    "code": 70,
+    "message": "There is no block with the id specified in the blockchain.",
+    "title": "Block Not Found"
+  }
+}

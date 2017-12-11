@@ -1,0 +1,52 @@
+<!--
+  Copyright 2017 PokitDok, Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<div class="well">
+  <dl class="horizontal">
+    <dt>Block Number</dt>
+    <dd>{{ data.header?.block_num }}</dd>
+
+    <dt>Previous Block ID</dt>
+    <dd><a [routerLink]="'/blocks/' + data.header?.previous_block_id">{{ data.header?.previous_block_id }}</a></dd>
+
+    <dt>Consensus</dt>
+    <dd>{{ data.header?.consensus | base64decode }}</dd>
+
+    <dt>Signer Public Key</dt>
+    <dd class="ellipsis"><a>{{ data.header?.signer_pubkey }}</a></dd>
+
+    <dt>State Root Hash</dt>
+    <dd class="ellipsis"><a>{{ data.header?.state_root_hash }}</a></dd>
+  </dl>
+</div>
+
+<hr/>
+
+<ng-container *ngIf="!showDataAsJSON">
+  <data-table [data]="data.batches" [type]="'Batches'"></data-table>
+</ng-container>
+
+<ng-container *ngIf="showDataAsJSON">
+  <h4 class="h4">Payload</h4>
+
+  <div ace-editor
+       [text]="'{}'"
+       [mode]="'json'"
+       [theme]="'twilight'"
+       [options]="options"
+       [readOnly]="false"
+       class="ace-editor"></div>
+</ng-container>

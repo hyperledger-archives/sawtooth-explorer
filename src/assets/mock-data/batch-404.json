@@ -1,0 +1,7 @@
+{
+  "error": {
+    "code": 71,
+    "message": "There is no batch with the id specified in the blockchain.",
+    "title": "Batch Not Found"
+  }
+}

@@ -1,0 +1,64 @@
+<!--
+  Copyright 2017 PokitDok, Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<section class="detail">
+  <div class="container">
+    <h2 class="h2">State Monitor</h2>
+
+    <table class="full-width">
+      <thead>
+        <tr>
+          <th>Monitored Address</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody *ngIf="!addresses.length">
+        <tr>
+          <td colspan="2"><em>No addresses being watched for state changes.</em></td>
+        </tr>
+      </tbody>
+      <tbody *ngIf="addresses.length">
+        <tr *ngFor="let address of addresses; let idx = index" class="address-row">
+          <td>{{ address }}</td>
+          <td class="text-right">
+            <button mat-icon-button class="mat-button delete-button" (click)="removeAddress(idx)">
+              <mat-icon class="address-rm">close</mat-icon>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="row">
+       <div class="ten columns">
+        <mat-form-field class="full-width">
+          <input [(ngModel)]="newAddress" 
+            matInput class="full-width"
+            placeholder="Add address" />
+        </mat-form-field>
+      </div>
+      <div class="two columns"> 
+        <button mat-button class="mat-raised-button full-width add-button" (click)="addAddress(newAddress)">
+          add
+        </button>
+      </div>
+    </div>
+
+    <hr/>
+
+    <data-table [data]="states" [type]="'States'"></data-table>
+  </div>
+</section>

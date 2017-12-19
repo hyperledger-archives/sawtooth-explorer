@@ -1,0 +1,7 @@
+{
+  "error": {
+    "code": 72,
+    "message": "There is no transaction with the id specified in the blockchain.",
+    "title": "Transaction Not Found"
+  }
+}

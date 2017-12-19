@@ -1,0 +1,325 @@
+/**
+ * Copyright 2017 PokitDok, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * ------------------------------------------------------------------------------
+ */
+
+@import './theme';
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  font-weight: lighter;
+  background-color: #f8f8f8;
+}
+
+md-button {
+  text-transform: uppercase;
+}
+
+h1, h2 {
+  font-weight: 400;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+.se-primary-header {
+  padding-left: 20px;
+  background: mat-color($se-primary, 700);
+  margin-bottom: 20px;
+
+  h1 {
+    color: mat-color($se-primary, default-contrast);
+    font-size: 30px;
+    font-weight: 300;
+    margin: 0;
+    padding: 50px;
+  }
+}
+
+code {
+  font-size: 90%;
+}
+
+footer {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding-top: 16px;
+  font-size: 13px;
+  border-top: 1px solid #CCC;
+  text-align: right;
+}
+
+.loader {
+  background-size: 100px;
+  background-image: url('assets/images/sawtooth_logo_loader.gif');
+  margin: 30px auto;
+  height: 100px;
+  width: 100px;
+}
+
+.table-full-width.mat-table {
+  display: block;
+  overflow: auto;
+
+  thead, tbody {
+    display: block;
+  }
+
+  .mat-header-row, .mat-row {
+    display: flex;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    align-items: center;
+    height: 48px;
+    padding: 0 24px;
+    td {
+      max-width: 100%;
+    }
+  }
+
+  .mat-header-cell, .mat-cell {
+      flex: 1;
+      border: 0;
+  }
+
+  .title-flex-cell {
+    flex: 1 0 200px;
+  }
+}
+
+.votes-for {
+  color: green;
+}
+
+.votes-against {
+  color: red;
+}
+
+.mat-cell-actions {
+  text-align: right;
+}
+
+.h1, .h2, .h3, .h4, .h5 {
+  font-weight: lighter;
+
+  &.with-subheader {
+    margin-bottom: 4px;
+  }
+}
+
+.h2 {
+  margin-top: 21px;
+  font-size: 28px;
+  line-height: 30px;
+  small {
+    font-size: 20px;
+  }
+}
+
+.h2-adjacent {
+  padding-top: 21px;
+  text-align: right;
+}
+
+.h3 {
+  margin-top: 18px;
+  font-size: 24px;
+}
+
+.h3-adjacent {
+  padding-top: 8px;
+  text-align: right;
+}
+
+.h4 {
+  margin-top: 12px;
+  font-size: 21px;
+  small {
+    font-size: 18px;
+  }
+}
+
+.h5 {
+  font-size: 18px;
+}
+
+.list-id {
+  max-width: 100%;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.detail-page-actions {
+  text-align: center;
+
+  .row:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.well {
+  background: #fff;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.meta-icon {
+  width: 50px;
+  height: 50px;
+  background: mat-color($se-accent);
+  color: mat-color($se-primary, default-contrast);
+  text-align: center;
+  border-radius: 50%;
+  float: left;
+  margin-right: 7px;
+
+  .mat-icon {
+    line-height: 50px;
+  }
+}
+
+hr {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+hr.small {
+  margin: 16px 0;
+  clear: both;
+}
+
+.detail-meta {
+  position: relative;
+
+  .meta-text {
+    float: left;
+    .meta-header {
+      font-size: 18px;
+      color: mat-color($se-primary, 200);
+      margin-bottom: 0;
+    }
+  }
+}
+
+.card-icon {
+  background: mat-color($se-accent);
+  color: mat-color($se-primary, default-contrast);
+  text-align: center;
+  line-height: 40px;
+
+  .mat-icon {
+    margin-top: 7px;
+  }
+}
+
+.proposal-card {
+  .mat-card-actions {
+    text-align: center;
+  }
+
+  .mat-card-title {
+    margin-bottom: 8px;
+  }
+
+  .mat-card-subtitle {
+    margin-bottom: 0;
+  }
+}
+
+hr.small {
+  margin: 16px 0;
+}
+
+dl.detail-dl {
+  dt {
+    color: mat-color($se-primary, 200);
+  }
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.ace-editor {
+  display: block;
+  height: 40vh;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+p.id {
+  word-break: break-all;
+}
+
+.card-bg {
+  background: #fff;
+}
+
+md-paginator.mat-paginator {
+  background: transparent;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.nav-paginator {
+  & > .mat-paginator-container {
+    border-bottom: 1px solid #E1E1E1;
+    .mat-paginator-range-label {
+      margin: 0 0 0 24px;
+    }
+    .mat-paginator-range-actions {
+      min-height: auto !important;
+
+      .mat-icon-button {
+          width: 30px;
+          height: 30px;
+          line-height: 30px;
+      }
+    }
+  }
+}
+
+.item.active .list-item {
+  background: #fff;
+}
+
+p.error-text {
+  margin-bottom: 0;
+}

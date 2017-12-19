@@ -1,0 +1,111 @@
+/**
+ * Copyright 2017 PokitDok, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * ------------------------------------------------------------------------------
+ */
+
+@import '~@angular/material/theming';
+
+// Include the common styles for Angular Material
+@include mat-core();
+
+// setup the primary palette map
+$se-primary-palette: (
+  50 : #c9e0f1,
+  100 : #a0c8e5,
+  200 : #78afd8,
+  300 : #4f97cc,
+  400 : #1272b9,
+  500 : #1067a8,
+  600 : #0d5285,
+  700 : #093d63,
+  800 : #062841,
+  900 : #03131f,
+  A100 : #49b1ff,
+  A200 : #0090fa,
+  A400 : #0070c3,
+  A700 : #004d86,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #ffffff,
+  )
+);
+
+// setup the accent palette map
+$se-accent-palette: (
+  50 : #d4edf7,
+  100 : #bae4f6,
+  200 : #9fdbf4,
+  300 : #85d2f2,
+  400 : #5dc5f0,
+  500 : #54b7df,
+  600 : #54b7df,
+  700 : #429abf,
+  800 : #307e9f,
+  900 : #1e627e,
+  A100 : #ffffff,
+  A200 : #cff0fd,
+  A400 : #92d8f6,
+  A700 : #35b1e5,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+// set the palettes
+$se-primary: mat-palette($se-primary-palette);
+$se-accent: mat-palette($se-accent-palette);
+
+// The warn palette is optional (defaults to red).
+$se-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$se-theme: mat-light-theme($se-primary, $se-accent, $se-warn);
+
+// Include theme styles for core and each component used in your app.
+@include angular-material-theme($se-theme);
+
+
+// Define a custom typography config that overrides the font-family
+$se-typography: mat-typography-config(
+  $font-family: '"Roboto", sans-serif'
+);
+
+// Override typography for all Angular Material
+@include angular-material-typography($se-typography);

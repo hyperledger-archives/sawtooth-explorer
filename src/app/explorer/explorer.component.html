@@ -1,0 +1,103 @@
+<!--
+  Copyright 2017 PokitDok, Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<section class="explorer">
+  <table class="content">
+    <tr>
+      <td class="left-column">
+        <section class="view-select">
+            <mat-select placeholder="Explore all" [(ngModel)]="viewType" (change)="onChangeViewType(viewType)" name="view">
+              <mat-option *ngFor="let view of views" [value]="view">
+                {{ view }}
+              </mat-option>
+            </mat-select>
+        </section>
+
+        <section>
+          <ng-container *ngIf="loading">
+            <div class="loader"></div>
+          </ng-container>
+
+          <ng-container *ngIf="!loading">
+            <mat-paginator class="nav-paginator"
+              [length]="navTotalItems"
+              [pageSize]="navPageSize"
+              [pageIndex]="navPageIndex"
+              [pageSizeOptions]="navPageSizeOptions"
+              (page)="updateNavPaging($event)">
+            </mat-paginator>
+
+            <ng-container *ngIf="items && items.length">
+              <dynamic-view-loader class="item"
+                [ngClass]="{'active': item === selectedItem}"
+                *ngFor="let item of items"
+                [component]="listViewComponent"
+                [data]="item"
+                (click)="showItemDetails(item)">
+              </dynamic-view-loader>
+            </ng-container>
+
+            <ng-container *ngIf="!items || !items.length">
+              <p class="no-results">No {{ viewType }} to display.</p>
+            </ng-container>
+          </ng-container>
+
+        </section>
+        
+      </td>
+      <td class="right-column mat-elevation-z2">
+
+        <ng-container *ngIf="loading">
+          <div class="loader"></div>
+        </ng-container>
+
+        <ng-container *ngIf="!loading">
+          <div class="detail" *ngIf="selectedItem">
+            <ng-container *ngIf="viewType === 'transactions'">
+              <h2 class="h2 with-subheader">
+                Transaction Detail<br/>
+              </h2>
+              <p class="id">ID: <a [routerLink]="'/transactions/' + selectedItem.header_signature">{{ selectedItem.header_signature }}</a></p>
+              <transaction [data]="selectedItem"></transaction>
+            </ng-container>
+            <ng-container *ngIf="viewType === 'blocks'">
+              <h2 class="h2 with-subheader">
+                Block Detail<br/>
+              </h2>
+              <p class="id">
+                ID: <a [routerLink]="'/blocks/' + selectedItem.header_signature">
+                  {{ selectedItem.header_signature }}</a>
+              </p>
+              <block [data]="selectedItem"></block>
+            </ng-container>
+            <ng-container *ngIf="viewType === 'batches'">
+              <h2 class="h2 with-subheader">
+                Batch Detail<br/>
+              </h2>
+              <p class="id">ID: <a [routerLink]="'/batches/' + selectedItem.header_signature">{{ selectedItem.header_signature }}</a></p>
+              <batch [data]="selectedItem"></batch>
+            </ng-container>
+          </div>
+
+          <div class="detail" *ngIf="!selectedItem">
+            <p class="no-item-selected">No item selected.</p>
+          </div>
+        </ng-container>
+        
+      </td>
+    </tr>
+  </table>
+</section>

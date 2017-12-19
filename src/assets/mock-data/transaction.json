@@ -1,0 +1,25 @@
+{
+  "data": {
+    "header": {
+      "batcher_pubkey": "027b4fd1b98e51f376ae445ec092e9cbcf2efc9eaa95073ff4e383fbd5d9f4f406",
+      "dependencies": [],
+      "family_name": "dokchain_recovery",
+      "family_version": "0.0.1",
+      "inputs": [
+        "757ebf0692fd1a73bab803b7cf03d652fcc789af10251a1f01d01af520a146043fb8d9",
+        "757ebfaa3d5206e064c1c0b4c1fb6aa5c6bc0d0e46a434d77b4620e7b9df8295b9b773"
+      ],
+      "nonce": "ff082e43-6554-4119-8395-17a0dc60e32f",
+      "outputs": [
+        "757ebf0692fd1a73bab803b7cf03d652fcc789af10251a1f01d01af520a146043fb8d9",
+        "757ebfaa3d5206e064c1c0b4c1fb6aa5c6bc0d0e46a434d77b4620e7b9df8295b9b773"
+      ],
+      "payload_encoding": "json",
+      "payload_sha512": "6d2a5ffa065510c7b77fc5544d946f32571c78f715e85e0f61439779bcdc03cb570ab11afd1669c385d5828751a9945f95ad8a2c2bbfee593b661b95d574b9ae",
+      "signer_pubkey": "027b4fd1b98e51f376ae445ec092e9cbcf2efc9eaa95073ff4e383fbd5d9f4f406"
+    },
+    "header_signature": "b92e956f5eba91892bf4c1c1d5ed61a52f7f8b19c1bbbf3eefd9322377efd69b0966fcbcb102f21f8aab8cc4980b1fbb89d3ea8e032f3862a0a21a49f7c34966",
+    "payload": "eyJhY3Rpb24iOiAiUkVUVVJOX1NIQVJFIiwgInNoYXJlIjogIjBlZjNmYmE4MzEzOGNlODcxNGI4NmI2YWE5OGE2M2M1MDQ0ZWI5MjM2NWZiYTFkMTkwOTZlYzcwNzZkZjYzZjRlZjMyMmQxZjk0NzdlOWQzZjlkOTYxYWQ4NmIyNjU1Zjk4MTZkYmFiOGE3M2Y1NmFjNmQyMGYwMTUyODJiMDM5ZDFhYzU2YzAzYWVlODMwMjM1ZDBkMzcwYzY0MTkyOWY1YzYxZjIyNzY3NjA1NTBmZDgwYmNmZWJiM2E5NjFiYjc0NmQ3OTQ3NzdlNzZlN2EyNTAzNWRhYzhlNjQxODcyYzc2ZTVmMDk3M2VjYWZjZDBiODhhMDEwYmUyYTExMWZlODVkZGE0ZDQxN2JlNDZjZmRlODRkNzM4MDYyYTE3NDc2M2ZjODE0ZmI5OTlkZWYwYTZkOGM1OWY0ZWIzODRlZWQ0NmVmMjk5OTQ5YWFlNTM4ZDM3ZTU3MjBkNjUwMThjNGQ2OGNkZGM0NmMxYWM2ZmMyMDk5YTM4YjNiY2M0NjdhYzQ2MGVmOGE0NGM3ZDY4NDkyZDhmNzE3NjI0YTg2YTRjZWQyMzRlMDNkYTYwYjEyNmNjNWQzOTAxNWZlMWVjNCIsICJ0b2tlbl9pZCI6ICI5OTg0MGNmMS01ODZhLTRjOTgtOWE5NC05Y2JjNTA4MTBlY2EifQ=="
+  },
+  "link": "http://localhost:8080/transactions/b92e956f5eba91892bf4c1c1d5ed61a52f7f8b19c1bbbf3eefd9322377efd69b0966fcbcb102f21f8aab8cc4980b1fbb89d3ea8e032f3862a0a21a49f7c34966"
+}

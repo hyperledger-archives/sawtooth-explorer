@@ -27,7 +27,7 @@ nodeenv --node=6.11.1 --prebuilt venv
 source venv/bin/activate
 
 echo "Installing npm dependencies..."
-npm install -g @angular/cli node-sass
+npm install -g @angular/cli@">=1.5.6 <2.0.0" node-sass
 deactivate_node
 
 echo "Installing local node modules..."

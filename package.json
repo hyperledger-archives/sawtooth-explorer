@@ -34,7 +34,7 @@
     "ng2-ace": "0.0.15"
   },
   "devDependencies": {
-    "@angular/cli": "1.5.5",
+    "@angular/cli": "^1.5.6",
     "@angular/compiler-cli": "5.0.1",
     "@angular/language-service": "5.0.1",
     "@types/jasmine": "2.6.3",
@@ -52,6 +52,6 @@
     "protractor": "5.2.0",
     "ts-node": "3.3.0",
     "tslint": "5.8.0",
-    "typescript": "^2.4.2"
+    "typescript": "~2.4.2"
   }
 }

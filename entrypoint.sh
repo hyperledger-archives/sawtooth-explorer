@@ -1,4 +1,5 @@
-# Copyright 2018 by Blockchain Technology Partners
+#!/bin/bash
+# Copyright 2018 by Cloudsoft Corporation Limited
 #
 # Licensed to the Apache Software Foundation (ASF) under one
 # or more contributor license agreements.  See the NOTICE file
@@ -17,15 +18,9 @@
 # specific language governing permissions and limitations
 # under the License.
 
-FROM node:8
+if [ "${SAWTOOTH_REST_API}" ] ; then
+  sed -i "s|localhost|${SAWTOOTH_REST_API}|g" src/environments/environment.prod.ts
+fi
 
-COPY . /explorer
-
-WORKDIR /explorer
-
-EXPOSE 4201
-
-RUN npm install -g @angular/cli@">=1.5.6 <2.0.0" node-sass \
- && npm install
-
-CMD [ "./entrypoint.sh" ]
+npm build --prod
+npm start -- --env=prod --host=0.0.0.0 --port=4201

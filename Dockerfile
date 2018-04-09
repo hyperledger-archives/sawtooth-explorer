@@ -1,6 +1,4 @@
-#!/usr/bin/env bash
-#
-# Copyright 2017 PokitDok, Inc.
+# Copyright 2018 PokitDok, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,23 +13,13 @@
 # limitations under the License.
 # ------------------------------------------------------------------------------
 
-echo "Removing any existing virtualenv files..."
-# cleanup old virtualenv
-rm -rf venv
-# cleanup old nodejs files
-rm -rf node_modules
+FROM node:6
 
-echo "Creating a new nodejs virtualenv with, `pip install nodeenv` if you haven't already..."
-pip install nodeenv
-nodeenv --node=6.11.1 --prebuilt venv
-source venv/bin/activate
+ADD . /explorer
 
-echo "Installing npm dependencies..."
-npm install -g @angular/cli@">=1.5.6 <2.0.0" node-sass
-deactivate_node
+WORKDIR /explorer
 
-echo "Installing local node modules..."
-npm install
-
-echo "All done, great job!"
-echo "Run 'source venv/bin/activate' to activate the nodejs virtualenv."
+RUN npm install -g @angular/cli@">=1.5.6 <2.0.0" node-sass@">=4.8.3"
+RUN npm install
+RUN ng build
+RUN npm rebuild node-sass --force

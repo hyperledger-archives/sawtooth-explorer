@@ -15,8 +15,7 @@
  * ------------------------------------------------------------------------------
  */
 
-import { Component, OnInit, OnDestroy, ComponentFactoryResolver } from
-  '@angular/core';
+import { Component, OnInit, OnDestroy, ComponentFactoryResolver } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { MatTableModule, MatSnackBar } from '@angular/material';
 
@@ -60,6 +59,12 @@ export class ExplorerComponent implements OnInit {
 
   // type of items currently being viewed
   viewType: string;
+
+  // paging settings
+  currentHead: string;
+  currentId: string
+  nextId: string;
+  previousId: string;
 
   // types of views user can select to see
   views = ['transactions', 'batches', 'blocks'];
@@ -125,6 +130,8 @@ export class ExplorerComponent implements OnInit {
 
     this.items = data.data;
     this.navTotalItems = data.paging.total_count;
+    this.currentHead = data.head;
+    this.nextId = data.next_position;
 
     this.selectedItem = this.items[0];
 
@@ -132,7 +139,7 @@ export class ExplorerComponent implements OnInit {
     this.listViewComponent = this.listViewComponents[this.viewType];
 
     // update url to reflect selection
-    this.updateParams(this.viewType);
+    this.updateParams(this.viewType, this.currentHead);
 
     // show list of items after API is done loading
     this.loading = false;
@@ -204,7 +211,7 @@ export class ExplorerComponent implements OnInit {
     this.selectedItem = item;
 
     // update url to reflect selection
-    this.updateParams(this.viewType);
+    this.updateParams(this.viewType, this.currentHead);
   }
 
   /**
@@ -212,11 +219,12 @@ export class ExplorerComponent implements OnInit {
    * the URL.
    * @param viewType {string} - name of the type of view currently shown
    */
-  updateParams(viewType: string): void {
+  updateParams(viewType: string, currentHead): void {
     // update query string params to reflect selected item
     const queryParams: Params = Object.assign({},
       this.activatedRoute.snapshot.queryParams);
     queryParams['view'] = viewType;
+    queryParams['head'] = currentHead;
 
     // navigate to same route to update query string params
     this.router.navigate(['.'], {

@@ -16,7 +16,7 @@
 version: "2.1"
 
 services:
-  sawtooth-explorer-rest-api-proxy:
+  rest-api-proxy:
     image: nginx
     container_name: sawtooth-explorer-rest-api-proxy
     volumes:
@@ -24,9 +24,14 @@ services:
     ports:
       - "8090:8090"
     command: [nginx, '-g', 'daemon off;']
-  sawtooth-explorer:
+  ng-server:
     build: .
+    depends_on:
+      - rest-api-proxy
     container_name: sawtooth-explorer
     ports:
       - "4200:4200"
-    command: "ng serve"
+    command: npm run start -- --host 0.0.0.0 --port 4200
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules

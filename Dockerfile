@@ -13,13 +13,4 @@
 # limitations under the License.
 # ------------------------------------------------------------------------------
 
-FROM node:6
-
-ADD . /explorer
-
-WORKDIR /explorer
-
-RUN npm install -g @angular/cli@">=1.5.6 <2.0.0" node-sass@">=4.8.3"
-RUN npm install
-RUN ng build
-RUN npm rebuild node-sass --force
+FROM node:6-onbuild

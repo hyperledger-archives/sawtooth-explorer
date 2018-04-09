@@ -20,10 +20,10 @@
     <dd>{{ data.header.family_name }}, v{{ data.header.family_version }}</dd>
 
     <dt>Signer Public Key</dt>
-    <dd><a routerLink="/wallet">{{ data.header.signer_pubkey || '-' }}</a></dd>
+    <dd><a routerLink="/wallet">{{ data.header.signer_public_key || '-' }}</a></dd>
 
     <dt>Batcher Public Key</dt>
-    <dd><a routerLink="/wallet">{{ data.header.batcher_pubkey || '-' }}</a></dd>
+    <dd><a routerLink="/wallet">{{ data.header.batcher_public_key || '-' }}</a></dd>
 
     <dt>Nonce</dt>
     <dd>{{ data.header.nonce || '-' }}</dd>

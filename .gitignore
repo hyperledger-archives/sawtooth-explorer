@@ -15,6 +15,7 @@
 
 venv
 .editorconfig
+package-lock.json
 
 # compiled output
 /dist

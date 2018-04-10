@@ -18,17 +18,37 @@
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/0.13/config/configuration-file.html
 
+var testBrowsers = ['Chrome'];
+var customLaunchers = {};
+var singleRun = false;
+var plugins = [
+  require('karma-jasmine'),
+  require('karma-chrome-launcher'),
+  require('karma-jasmine-html-reporter'),
+  require('karma-coverage-istanbul-reporter'),
+  require('@angular/cli/plugins/karma')
+];
+if (process.env.SELENIUM_HOST) {
+  singleRun = true;
+  plugins.push(require('karma-webdriver-launcher'));
+  testBrowsers = ['DockerSelenium'];
+  customLaunchers = {
+    DockerSelenium: {
+      base: 'WebDriver',
+      browserName: 'chrome',
+      config: {
+        hostname: process.env.SELENIUM_HOST,
+        port: process.env.SELENIUM_PORT || '4444'
+      }
+    }
+  };
+}
+
 module.exports = function (config) {
   config.set({
     basePath: 'src/app',
     frameworks: ['jasmine', '@angular/cli'],
-    plugins: [
-      require('karma-jasmine'),
-      require('karma-chrome-launcher'),
-      require('karma-jasmine-html-reporter'),
-      require('karma-coverage-istanbul-reporter'),
-      require('@angular/cli/plugins/karma')
-    ],
+    plugins: plugins,
     client:{
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
@@ -43,9 +63,11 @@ module.exports = function (config) {
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
-    autoWatch: true,
-    browsers: ['Chrome'],
+    autoWatch: !singleRun,
+    hostname: process.env.TEST_WEB_HOST,
+    customLaunchers: customLaunchers,
+    browsers: testBrowsers,
     browserNoActivityTimeout: 30000,
-    singleRun: false
+    singleRun: singleRun
   });
 };

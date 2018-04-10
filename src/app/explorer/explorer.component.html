@@ -52,7 +52,9 @@
               <p class="no-results">No {{ viewType }} to display.</p>
             </ng-container>
             <ng-container *ngIf="nextPosition">
-              <button (click)="nextPage()">Load More</button>
+              <div class="list-item">
+                <button mat-button class="mat-raised-button full-width" (click)="nextPage()">Load Next {{navPageSize}}</button>
+              </div>
             </ng-container>
           </ng-container>
 

@@ -17,7 +17,7 @@
 
 import { Component, OnInit, OnDestroy, ComponentFactoryResolver } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
-import { MatTableModule, MatSnackBar } from '@angular/material';
+import { MatTableModule, MatSnackBar, MatButtonModule } from '@angular/material';
 
 import { Subject } from 'rxjs/Subject';
 import { Subscription } from 'rxjs/Subscription';
@@ -135,7 +135,7 @@ export class ExplorerComponent implements OnInit {
       this.items = [];
     }
 
-    this.items = this.items.concat(data.data);
+    this.items = data.data;
     this.navTotalItems = this.items.length + data.data.length;
     this.currentHead = data.head;
     this.nextPosition = data.paging.next_position;

@@ -34,9 +34,22 @@ services:
     ports:
       - "4200:4200"
     command: npm run start -- --host 0.0.0.0 --port 4200
+    environment:
+      SELENIUM_ADDRESS: http://selenium:4444/wd/hub
+      SELENIUM_HOST: selenium
+      TEST_WEB_HOST: ng-server
+      BASE_URL: http://ng-server:4200
     volumes:
       - ./:/usr/src/app
       - /usr/src/app/node_modules
       - dist-html:/usr/src/dist
+  selenium:
+    image: selenium/standalone-chrome
+    environment:
+      JAVA_OPTS: -Dselenium.LOGGER.level=WARNING -Dwebdriver.chrome.whitelistedIps="ng-server"
+    volumes:
+      - "/dev/shm:/dev/shm"
+    ports:
+      - 4444:4444
 volumes:
   dist-html:

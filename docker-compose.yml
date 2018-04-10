@@ -21,8 +21,10 @@ services:
     container_name: sawtooth-explorer-rest-api-proxy
     volumes:
       - ./docker/nginx.conf:/etc/nginx/nginx.conf:ro
+      - dist-html:/www/ste
     ports:
       - "8090:8090"
+      - "8091:8091"
     command: [nginx, '-g', 'daemon off;']
   ng-server:
     build: .
@@ -35,3 +37,6 @@ services:
     volumes:
       - ./:/usr/src/app
       - /usr/src/app/node_modules
+      - dist-html:/usr/src/dist
+volumes:
+  dist-html:

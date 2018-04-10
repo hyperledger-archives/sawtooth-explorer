@@ -71,8 +71,9 @@ export class APIService {
    */
   getItems(resourceName: string, params?: object): Observable<object[]> {
     let options: object = _.defaults(params, this.pagingDefaults);
-    let min = options['pageIndex'] * options['pageSize'];
-    let url = this.apiURL + '/' + resourceName + '?limit=' + options['pageSize'];
+    let head = (params['head']) ? '&head=' + params['head'] : '';
+    let start = (params['start']) ? '&start=' + params['start'] : '';
+    let url = this.apiURL + '/' + resourceName + '?limit=' + options['pageSize'] + head + start;
 
     return this.http.get(url)
       .timeout(this.apiTimeout)

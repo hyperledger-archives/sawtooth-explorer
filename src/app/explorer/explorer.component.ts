@@ -63,7 +63,7 @@ export class ExplorerComponent implements OnInit {
   // paging settings
   currentHead: string;
   currentId: string
-  nextId: string;
+  nextPosition: string;
   previousId: string;
 
   // types of views user can select to see
@@ -111,10 +111,13 @@ export class ExplorerComponent implements OnInit {
     this.activatedRoute.queryParams.subscribe((queryParams: Params) => {
       let viewType = queryParams['view'];
 
+      // prevent extra load during query param update
+      if (this.viewType && viewType === this.viewType) {
+        return false;
+      }
       // set active view type if type is set in the URL
       this.viewType = this.views.indexOf(viewType) !== -1 ?
         viewType : 'transactions';
-
       this.subscribeToItems(this.viewType, {
         pageSize: this.navPageSize, pageIndex: this.navPageIndex
       });
@@ -128,10 +131,14 @@ export class ExplorerComponent implements OnInit {
   updateView(data: any) {
     if (!data) return;
 
-    this.items = data.data;
-    this.navTotalItems = data.paging.total_count;
+    if (this.navPageIndex === 0) {
+      this.items = [];
+    }
+
+    this.items = this.items.concat(data.data);
+    this.navTotalItems = this.items.length + data.data.length;
     this.currentHead = data.head;
-    this.nextId = data.next_position;
+    this.nextPosition = data.paging.next_position;
 
     this.selectedItem = this.items[0];
 
@@ -152,7 +159,6 @@ export class ExplorerComponent implements OnInit {
   updateNavPaging(event: object) {
     this.navPageSize = event['pageSize'];
     this.navPageIndex = event['pageIndex'];
-
     this.subscribeToItems(this.viewType, event);
   }
 
@@ -162,6 +168,9 @@ export class ExplorerComponent implements OnInit {
    */
   onChangeViewType(viewType: string): void {
     this.viewType = viewType;
+    this.currentHead = null;
+    this.nextPosition = null;
+    this.navPageIndex = 0;
 
     this.subscribeToItems(this.viewType, {
       pageSize: this.navPageSize, pageIndex: this.navPageIndex
@@ -174,7 +183,6 @@ export class ExplorerComponent implements OnInit {
    * @param pagingSettings {object} - settings for API paging
    */
   subscribeToItems(viewType: string, pagingSettings: object) {
-
     // nav should wait for API to load
     this.loading = true;
 
@@ -182,7 +190,8 @@ export class ExplorerComponent implements OnInit {
     if (this.apiItemsSubscription) {
       this.apiItemsSubscription.unsubscribe();
     }
-
+    pagingSettings['head'] = this.currentHead;
+    pagingSettings['start'] = this.nextPosition;
     this.apiItemsSubscription = this.apiService
       .getItems(viewType, pagingSettings)
       .takeUntil(this.ngUnsubscribe)
@@ -238,6 +247,14 @@ export class ExplorerComponent implements OnInit {
     // complete empty subscription to end all other active subscriptions
     this.ngUnsubscribe.next();
     this.ngUnsubscribe.complete();
+  }
+
+  nextPage() {
+    // load the next page of results
+    this.updateNavPaging({
+      pageSize: this.navPageSize,
+      pageIndex: this.navPageIndex + 1
+    });
   }
 
 }

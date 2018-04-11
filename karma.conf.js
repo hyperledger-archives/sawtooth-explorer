@@ -21,6 +21,7 @@
 var testBrowsers = ['Chrome'];
 var customLaunchers = {};
 var singleRun = false;
+var angularCliEnvironment = 'dev';
 var plugins = [
   require('karma-jasmine'),
   require('karma-chrome-launcher'),
@@ -28,7 +29,8 @@ var plugins = [
   require('karma-coverage-istanbul-reporter'),
   require('@angular/cli/plugins/karma')
 ];
-if (process.env.SELENIUM_HOST) {
+if (process.env.NG_DOCKER_COMPOSE) {
+  angularCliEnvironment = 'dc';
   singleRun = true;
   plugins.push(require('karma-webdriver-launcher'));
   testBrowsers = ['DockerSelenium'];
@@ -57,7 +59,7 @@ module.exports = function (config) {
       fixWebpackSourcePaths: true
     },
     angularCli: {
-      environment: 'dev'
+      environment: angularCliEnvironment
     },
     reporters: ['progress', 'kjhtml'],
     port: 9876,

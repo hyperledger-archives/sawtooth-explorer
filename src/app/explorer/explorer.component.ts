@@ -136,7 +136,7 @@ export class ExplorerComponent implements OnInit {
     }
 
     this.items = data.data;
-    this.navTotalItems = this.items.length + data.data.length;
+    this.navTotalItems = data.data.length;
     this.currentHead = data.head;
     this.nextPosition = data.paging.next_position;
 

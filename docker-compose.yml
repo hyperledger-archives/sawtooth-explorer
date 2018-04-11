@@ -39,6 +39,7 @@ services:
       SELENIUM_HOST: selenium
       TEST_WEB_HOST: ng-server
       BASE_URL: http://ng-server:4200
+      NG_DOCKER_COMPOSE: "true"
     volumes:
       - ./:/usr/src/app
       - /usr/src/app/node_modules

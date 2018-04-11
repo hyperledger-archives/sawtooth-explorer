@@ -4,7 +4,7 @@
       "batches": [
         {
           "header": {
-            "signer_pubkey": "021a7a678da00fcd6e8b8947b6fea454a5808d6dd332c7ad8b3987807cfb588ae6",
+            "signer_public_key": "021a7a678da00fcd6e8b8947b6fea454a5808d6dd332c7ad8b3987807cfb588ae6",
             "transaction_ids": [
               "0e24cde5e2c868f35ed5142359ddf48fd66d58cb130638a29d668f515dcc06cb1e65a28f59b72d39399df1a9f1422088dc2dc3888dc4b9529f30b01fbbf3e401"
             ]
@@ -13,7 +13,7 @@
           "transactions": [
             {
               "header": {
-                "batcher_pubkey": "021a7a678da00fcd6e8b8947b6fea454a5808d6dd332c7ad8b3987807cfb588ae6",
+                "batcher_public_key": "021a7a678da00fcd6e8b8947b6fea454a5808d6dd332c7ad8b3987807cfb588ae6",
                 "dependencies": [],
                 "family_name": "dokchain_recovery",
                 "family_version": "0.0.1",
@@ -28,7 +28,7 @@
                 ],
                 "payload_encoding": "json",
                 "payload_sha512": "0d64e1b38f2b86eb09c30f168e794acb76c0498d0cb40e521dd5afd0ebe016594b11956f3c40a9590426a0613abab8ab94b486b0b7938ae250f402e885945d55",
-                "signer_pubkey": "021a7a678da00fcd6e8b8947b6fea454a5808d6dd332c7ad8b3987807cfb588ae6"
+                "signer_public_key": "021a7a678da00fcd6e8b8947b6fea454a5808d6dd332c7ad8b3987807cfb588ae6"
               },
               "header_signature": "0e24cde5e2c868f35ed5142359ddf48fd66d58cb130638a29d668f515dcc06cb1e65a28f59b72d39399df1a9f1422088dc2dc3888dc4b9529f30b01fbbf3e401",
               "payload": "eyJhY3Rpb24iOiAiUkVUVVJOX1NIQVJFIiwgInNoYXJlIjogImM0Yjg0MDk4MTNmYmE0MWVkNWJiNGZkMmJjNDg3ZGEyMDQwMWNkZjc0YzcxOTFiYTM3Mzc2MDk2YjBjOGM2NDI5MGUyYzliNjU4NTMwY2Q2OTUwNWE4M2UzNDgzMWNmYzlkZGI0MDkwZGQ0ZGQyYTIzOTdjMzEzOTUxZmIyNGQ4MmY3YTdhNTc1NGExNjYyMzA5MzM1MGY5MGEyMTNmYzNkNzQzMTY2OGY5NDc2NTI5ZTczYzM3MGZlMDdlMTAwMjVhMDNlOTRmZjcyMjM0MjNkMDQ3MmFkNDEyMjU4NWZjMzFkMjYyZTY4ZjVjYjFjODEyNTE5YjRmNGJhODc3MDkzNjliZjYwN2NlNWRmYThlMTgwMGQ4OGMxNWFlMzY4YTkxZmJlMTE2YzdlYTA3MzUxYTZmOTkwOGM2N2VkODRmMjdmNTk4YWE1ODJlZDdjMjQxYzA4Y2M2NTk3MmRlZTk0M2U4ODgxNWM1NTEyMjIyYjU2NGZhZWVkNjJlNjI1OTVlMDAwMzhhZWRkMjZmOGIzYzdhMGViOGE3ZmMyNTUxZTc4NmYzOGMwMzdjYTY1NmVkZTkzNzdlNWE2NTc0ZjVhOCIsICJ0b2tlbl9pZCI6ICI5ODAxYTQwMi0zNDEzLTQyYzktYjljNC0xYTM2MzVlYzU3NTMifQ=="
@@ -37,7 +37,7 @@
         },
         {
           "header": {
-            "signer_pubkey": "027b4fd1b98e51f376ae445ec092e9cbcf2efc9eaa95073ff4e383fbd5d9f4f406",
+            "signer_public_key": "027b4fd1b98e51f376ae445ec092e9cbcf2efc9eaa95073ff4e383fbd5d9f4f406",
             "transaction_ids": [
               "b92e956f5eba91892bf4c1c1d5ed61a52f7f8b19c1bbbf3eefd9322377efd69b0966fcbcb102f21f8aab8cc4980b1fbb89d3ea8e032f3862a0a21a49f7c34966"
             ]
@@ -46,7 +46,7 @@
           "transactions": [
             {
               "header": {
-                "batcher_pubkey": "027b4fd1b98e51f376ae445ec092e9cbcf2efc9eaa95073ff4e383fbd5d9f4f406",
+                "batcher_public_key": "027b4fd1b98e51f376ae445ec092e9cbcf2efc9eaa95073ff4e383fbd5d9f4f406",
                 "dependencies": [],
                 "family_name": "dokchain_recovery",
                 "family_version": "0.0.1",
@@ -61,7 +61,7 @@
                 ],
                 "payload_encoding": "json",
                 "payload_sha512": "6d2a5ffa065510c7b77fc5544d946f32571c78f715e85e0f61439779bcdc03cb570ab11afd1669c385d5828751a9945f95ad8a2c2bbfee593b661b95d574b9ae",
-                "signer_pubkey": "027b4fd1b98e51f376ae445ec092e9cbcf2efc9eaa95073ff4e383fbd5d9f4f406"
+                "signer_public_key": "027b4fd1b98e51f376ae445ec092e9cbcf2efc9eaa95073ff4e383fbd5d9f4f406"
               },
               "header_signature": "b92e956f5eba91892bf4c1c1d5ed61a52f7f8b19c1bbbf3eefd9322377efd69b0966fcbcb102f21f8aab8cc4980b1fbb89d3ea8e032f3862a0a21a49f7c34966",
               "payload": "eyJhY3Rpb24iOiAiUkVUVVJOX1NIQVJFIiwgInNoYXJlIjogIjBlZjNmYmE4MzEzOGNlODcxNGI4NmI2YWE5OGE2M2M1MDQ0ZWI5MjM2NWZiYTFkMTkwOTZlYzcwNzZkZjYzZjRlZjMyMmQxZjk0NzdlOWQzZjlkOTYxYWQ4NmIyNjU1Zjk4MTZkYmFiOGE3M2Y1NmFjNmQyMGYwMTUyODJiMDM5ZDFhYzU2YzAzYWVlODMwMjM1ZDBkMzcwYzY0MTkyOWY1YzYxZjIyNzY3NjA1NTBmZDgwYmNmZWJiM2E5NjFiYjc0NmQ3OTQ3NzdlNzZlN2EyNTAzNWRhYzhlNjQxODcyYzc2ZTVmMDk3M2VjYWZjZDBiODhhMDEwYmUyYTExMWZlODVkZGE0ZDQxN2JlNDZjZmRlODRkNzM4MDYyYTE3NDc2M2ZjODE0ZmI5OTlkZWYwYTZkOGM1OWY0ZWIzODRlZWQ0NmVmMjk5OTQ5YWFlNTM4ZDM3ZTU3MjBkNjUwMThjNGQ2OGNkZGM0NmMxYWM2ZmMyMDk5YTM4YjNiY2M0NjdhYzQ2MGVmOGE0NGM3ZDY4NDkyZDhmNzE3NjI0YTg2YTRjZWQyMzRlMDNkYTYwYjEyNmNjNWQzOTAxNWZlMWVjNCIsICJ0b2tlbl9pZCI6ICI5OTg0MGNmMS01ODZhLTRjOTgtOWE5NC05Y2JjNTA4MTBlY2EifQ=="
@@ -77,7 +77,7 @@
         "block_num": 112,
         "consensus": "RGV2bW9kZQ==",
         "previous_block_id": "98140dc727a1a904d8b63705c9a8a7408fbd6e8445bb5c2a4764822ecd29885425bbb11b9ba98ce454f8ec9b2128f848ecccaa916c51766e2fd4059911a535e1",
-        "signer_pubkey": "025e0bc40344926efe8ff84e9ce7af13cb0f42fdc8db69ba285f1c590a620b5faa",
+        "signer_public_key": "025e0bc40344926efe8ff84e9ce7af13cb0f42fdc8db69ba285f1c590a620b5faa",
         "state_root_hash": "974d5c25d5ec92664e1a16e9fc67c97b87d7e581208ba207b2853abfd6e561b5"
       },
       "header_signature": "7a45c2f92dbe952cbc234f8ac1cba56c20011fe9f0b799ece2e030c078182a687eb5222de42b9b990bb85c1646163a928bfe5a6f8161ab50108f9bd4c6ae32e7"
@@ -86,7 +86,7 @@
       "batches": [
         {
           "header": {
-            "signer_pubkey": "02c9ea759cf33f3a0ea71c37dbbf86d317a8170fb59a33c88429635c6c49351b7e",
+            "signer_public_key": "02c9ea759cf33f3a0ea71c37dbbf86d317a8170fb59a33c88429635c6c49351b7e",
             "transaction_ids": [
               "681f5037b225d30a6bbac2213beb90951235979458930fd87c8b730aa6bc42272e517ec4e365aad56175fc54159f4ab3093a3c8b670dd9b41928d0351778dd9b"
             ]
@@ -95,7 +95,7 @@
           "transactions": [
             {
               "header": {
-                "batcher_pubkey": "02c9ea759cf33f3a0ea71c37dbbf86d317a8170fb59a33c88429635c6c49351b7e",
+                "batcher_public_key": "02c9ea759cf33f3a0ea71c37dbbf86d317a8170fb59a33c88429635c6c49351b7e",
                 "dependencies": [],
                 "family_name": "dokchain_recovery",
                 "family_version": "0.0.1",
@@ -110,7 +110,7 @@
                 ],
                 "payload_encoding": "json",
                 "payload_sha512": "a8d003aa9688249e35f5a6910e4a1eae39c66c3a3f6cd2b25b5ec51d8eee00dcc473d49a099fbe6241b6420f030186a2ea21b76dfc3897e5da071acffc8c616b",
-                "signer_pubkey": "02c9ea759cf33f3a0ea71c37dbbf86d317a8170fb59a33c88429635c6c49351b7e"
+                "signer_public_key": "02c9ea759cf33f3a0ea71c37dbbf86d317a8170fb59a33c88429635c6c49351b7e"
               },
               "header_signature": "681f5037b225d30a6bbac2213beb90951235979458930fd87c8b730aa6bc42272e517ec4e365aad56175fc54159f4ab3093a3c8b670dd9b41928d0351778dd9b",
               "payload": "eyJhY3Rpb24iOiAiUkVUVVJOX1NIQVJFIiwgInNoYXJlIjogIjUyZjJhYmVmNmQxMGQyMTY2ZTVkN2U3ZTY1ZmU0MjI1MDRmZTE3MzczYmQxZGFkY2Y2MGVlMWZmYzIwNzkyZDY5ZDE0NjVjNTFiMWU4MjkzYmIyN2FlMWUzOWIwNjcyNGRlNmZhNjQxOGY1M2U1NjFhNjA4YzcxYjAyNGMxYTNhZWZkZGFmMDhkODBlYjAwZjVhZDIyODk4MTFkM2Q1ZDJhNmMwMjc5YmY5MjhjMTAxODNjNDI0ZjJiOWI2NmZkYmEzMjQ4Mzk4MDUzNWE0MzkwNzhhNTZmYTU2ZmVjNTEwNDg4MGU2NmYzZmU5Y2FkMjAxNjUzMDA5ODIyOTRiZGVkMDdkZDdhYTUyMWZkMGU1ZjBjOWM2YjRkNmEwZDI3YWQ2YWQ0OGNhN2Y5YjNmNjliYjJmMjU2MzEzOGY4MmU5MzUxMzQxNDI1MjM3MzdhZjQxOTkxNzI3YTA5NjI4MGFlMGFkMmVhOTIwODFkZTMyODk3ZjAwNjIxMTY4MzMzM2VmNmNkZDFiMzA2Mjk0ZWMzODVlM2I4ODdlNDVhNmRhNTU5MmU4MjE5MDNkMGRjODMzZjYxMmIyYmI4NmEzYjQ3MiIsICJ0b2tlbl9pZCI6ICIwN2YxYTNhOC1hZDBhLTRiZTctYWJmNi01MDc0OGE3ZmQ5MzQifQ=="
@@ -125,7 +125,7 @@
         "block_num": 111,
         "consensus": "RGV2bW9kZQ==",
         "previous_block_id": "ae1a14ab37569584a69fd5d767dce77c1c07bb20c93481330e4451d26ded525b1472fc67af568f280c03f95bc5a9bfb058b9bd1ec678a3189d27d828577fc158",
-        "signer_pubkey": "025e0bc40344926efe8ff84e9ce7af13cb0f42fdc8db69ba285f1c590a620b5faa",
+        "signer_public_key": "025e0bc40344926efe8ff84e9ce7af13cb0f42fdc8db69ba285f1c590a620b5faa",
         "state_root_hash": "af3221a5cc5d70e98037c4be89416aa91817b6699bf9140940fc7b320cf2b342"
       },
       "header_signature": "98140dc727a1a904d8b63705c9a8a7408fbd6e8445bb5c2a4764822ecd29885425bbb11b9ba98ce454f8ec9b2128f848ecccaa916c51766e2fd4059911a535e1"
@@ -134,7 +134,7 @@
       "batches": [
         {
           "header": {
-            "signer_pubkey": "0354a481f0b9b4ac475ff4d64de1585128bfcb2dc546b654568aeba9e54301a57f",
+            "signer_public_key": "0354a481f0b9b4ac475ff4d64de1585128bfcb2dc546b654568aeba9e54301a57f",
             "transaction_ids": [
               "bab2a13e1e17b4dc2e41a785a38d8b7af894c80fa8337d72daffc7f3cc38b93874e87ee53f4542f6b4f810f9bafe699ceb841a884f5a61a7e7e0a43315a3e53e",
               "fecee726011018fc549cf091815146e78d72e5e5b23c37b4ed84295f7fe23be419e34387f1f9c98def466bc887fe000171de6567ef5c2ff9a2aa94674d97b758"
@@ -144,7 +144,7 @@
           "transactions": [
             {
               "header": {
-                "batcher_pubkey": "0354a481f0b9b4ac475ff4d64de1585128bfcb2dc546b654568aeba9e54301a57f",
+                "batcher_public_key": "0354a481f0b9b4ac475ff4d64de1585128bfcb2dc546b654568aeba9e54301a57f",
                 "dependencies": [],
                 "family_name": "dokchain_uuid",
                 "family_version": "0.0.1",
@@ -157,14 +157,14 @@
                 ],
                 "payload_encoding": "json",
                 "payload_sha512": "cc7d62a23edb63d22b1c09648c9288fe48a0e878fa01b763f2310c5083b94dac6c93f99dc10371132b8599769a7aa0c0977ba88fdf2cc7b0931471afdc91492a",
-                "signer_pubkey": "0354a481f0b9b4ac475ff4d64de1585128bfcb2dc546b654568aeba9e54301a57f"
+                "signer_public_key": "0354a481f0b9b4ac475ff4d64de1585128bfcb2dc546b654568aeba9e54301a57f"
               },
               "header_signature": "bab2a13e1e17b4dc2e41a785a38d8b7af894c80fa8337d72daffc7f3cc38b93874e87ee53f4542f6b4f810f9bafe699ceb841a884f5a61a7e7e0a43315a3e53e",
               "payload": "eyJhY3Rpb24iOiAiQ1JFQVRFIiwgInV1aWQiOiAiOTk4NDBjZjEtNTg2YS00Yzk4LTlhOTQtOWNiYzUwODEwZWNhIiwgInNjb3BlIjogInNoYXJlX3JlcXVlc3QifQ=="
             },
             {
               "header": {
-                "batcher_pubkey": "0354a481f0b9b4ac475ff4d64de1585128bfcb2dc546b654568aeba9e54301a57f",
+                "batcher_public_key": "0354a481f0b9b4ac475ff4d64de1585128bfcb2dc546b654568aeba9e54301a57f",
                 "dependencies": [],
                 "family_name": "dokchain_recovery",
                 "family_version": "0.0.1",
@@ -181,7 +181,7 @@
                 ],
                 "payload_encoding": "json",
                 "payload_sha512": "9416d909d3f80dbf13635f99c6fd77edd38fcfc968dc0c9e6b7f7b75be81a29c88690623c8c676ab320721a183a86641ff8e6c96b71f687d7759b9ac74e383eb",
-                "signer_pubkey": "0354a481f0b9b4ac475ff4d64de1585128bfcb2dc546b654568aeba9e54301a57f"
+                "signer_public_key": "0354a481f0b9b4ac475ff4d64de1585128bfcb2dc546b654568aeba9e54301a57f"
               },
               "header_signature": "fecee726011018fc549cf091815146e78d72e5e5b23c37b4ed84295f7fe23be419e34387f1f9c98def466bc887fe000171de6567ef5c2ff9a2aa94674d97b758",
               "payload": "eyJwcmV2aW91c19wdWJrZXkiOiAiMDM3ODM5ZjZjNjE1ZmMxZmZhMDA3OWE2YjFjOGY0ZDcxZjg1YTYxYWU1MDEwYWJjOTE4MmMzMGJmMTczNzAwMWExIiwgImFjdGlvbiI6ICJSRVFVRVNUX1NIQVJFIiwgInRydXN0ZWRfcGFydHlfcHVia2V5IjogIjAyN2I0ZmQxYjk4ZTUxZjM3NmFlNDQ1ZWMwOTJlOWNiY2YyZWZjOWVhYTk1MDczZmY0ZTM4M2ZiZDVkOWY0ZjQwNiIsICJ0b2tlbl9pZCI6ICI5OTg0MGNmMS01ODZhLTRjOTgtOWE5NC05Y2JjNTA4MTBlY2EifQ=="
@@ -196,7 +196,7 @@
         "block_num": 110,
         "consensus": "RGV2bW9kZQ==",
         "previous_block_id": "ecb163b3c218c64f91b5fa00eaf60cf38cbf15174741b9b418bfbbd79a81418401d3527f4228d636be5096d1cee92eeae4d7fdf337fed5d6a3986ac8cb19a207",
-        "signer_pubkey": "025e0bc40344926efe8ff84e9ce7af13cb0f42fdc8db69ba285f1c590a620b5faa",
+        "signer_public_key": "025e0bc40344926efe8ff84e9ce7af13cb0f42fdc8db69ba285f1c590a620b5faa",
         "state_root_hash": "b69a9224db196eed74fee76021e7754d8216bfe0e5974f8c51459ea5d33a5514"
       },
       "header_signature": "ae1a14ab37569584a69fd5d767dce77c1c07bb20c93481330e4451d26ded525b1472fc67af568f280c03f95bc5a9bfb058b9bd1ec678a3189d27d828577fc158"
@@ -205,7 +205,7 @@
       "batches": [
         {
           "header": {
-            "signer_pubkey": "0354a481f0b9b4ac475ff4d64de1585128bfcb2dc546b654568aeba9e54301a57f",
+            "signer_public_key": "0354a481f0b9b4ac475ff4d64de1585128bfcb2dc546b654568aeba9e54301a57f",
             "transaction_ids": [
               "bfbba8fd30dbb2b36d1a4f5b86f46ea2bfe27f3cccd361100a683804648d673c57ed9694c933d2173061342d48dc0794e6e2e144bf8c41d8e0d620ee1564b13a",
               "dbd8d5d16a82b4ac47fed7ef5a11fb934cdfc5b78c9312390cc838112d866d5e7c30b7f22e6a45d3c330373d8faffeeac4730025b7ab4baff2d4c7274960fe02"
@@ -215,7 +215,7 @@
           "transactions": [
             {
               "header": {
-                "batcher_pubkey": "0354a481f0b9b4ac475ff4d64de1585128bfcb2dc546b654568aeba9e54301a57f",
+                "batcher_public_key": "0354a481f0b9b4ac475ff4d64de1585128bfcb2dc546b654568aeba9e54301a57f",
                 "dependencies": [],
                 "family_name": "dokchain_uuid",
                 "family_version": "0.0.1",
@@ -228,14 +228,14 @@
                 ],
                 "payload_encoding": "json",
                 "payload_sha512": "06f605ba2811273672256ff9ffd5ae466cec3f2c0d00999a349e1c418c5deae29a6751e98119e46e9ed2093b01482cb1e37ef75d1c4f1add8d509bd2531c6f87",
-                "signer_pubkey": "0354a481f0b9b4ac475ff4d64de1585128bfcb2dc546b654568aeba9e54301a57f"
+                "signer_public_key": "0354a481f0b9b4ac475ff4d64de1585128bfcb2dc546b654568aeba9e54301a57f"
               },
               "header_signature": "bfbba8fd30dbb2b36d1a4f5b86f46ea2bfe27f3cccd361100a683804648d673c57ed9694c933d2173061342d48dc0794e6e2e144bf8c41d8e0d620ee1564b13a",
               "payload": "eyJhY3Rpb24iOiAiQ1JFQVRFIiwgInV1aWQiOiAiMDdmMWEzYTgtYWQwYS00YmU3LWFiZjYtNTA3NDhhN2ZkOTM0IiwgInNjb3BlIjogInNoYXJlX3JlcXVlc3QifQ=="
             },
             {
               "header": {
-                "batcher_pubkey": "0354a481f0b9b4ac475ff4d64de1585128bfcb2dc546b654568aeba9e54301a57f",
+                "batcher_public_key": "0354a481f0b9b4ac475ff4d64de1585128bfcb2dc546b654568aeba9e54301a57f",
                 "dependencies": [],
                 "family_name": "dokchain_recovery",
                 "family_version": "0.0.1",
@@ -252,7 +252,7 @@
                 ],
                 "payload_encoding": "json",
                 "payload_sha512": "39a5620a1b4587dc2cbab66a08b03894d1e86e6d81d456233e9a026e569a8f523de6ae963a61072779c84bd3d1df8e3901ffbdf488b3ad2a0ab764e134e31bfe",
-                "signer_pubkey": "0354a481f0b9b4ac475ff4d64de1585128bfcb2dc546b654568aeba9e54301a57f"
+                "signer_public_key": "0354a481f0b9b4ac475ff4d64de1585128bfcb2dc546b654568aeba9e54301a57f"
               },
               "header_signature": "dbd8d5d16a82b4ac47fed7ef5a11fb934cdfc5b78c9312390cc838112d866d5e7c30b7f22e6a45d3c330373d8faffeeac4730025b7ab4baff2d4c7274960fe02",
               "payload": "eyJwcmV2aW91c19wdWJrZXkiOiAiMDM3ODM5ZjZjNjE1ZmMxZmZhMDA3OWE2YjFjOGY0ZDcxZjg1YTYxYWU1MDEwYWJjOTE4MmMzMGJmMTczNzAwMWExIiwgImFjdGlvbiI6ICJSRVFVRVNUX1NIQVJFIiwgInRydXN0ZWRfcGFydHlfcHVia2V5IjogIjAyYzllYTc1OWNmMzNmM2EwZWE3MWMzN2RiYmY4NmQzMTdhODE3MGZiNTlhMzNjODg0Mjk2MzVjNmM0OTM1MWI3ZSIsICJ0b2tlbl9pZCI6ICIwN2YxYTNhOC1hZDBhLTRiZTctYWJmNi01MDc0OGE3ZmQ5MzQifQ=="
@@ -261,7 +261,7 @@
         },
         {
           "header": {
-            "signer_pubkey": "0354a481f0b9b4ac475ff4d64de1585128bfcb2dc546b654568aeba9e54301a57f",
+            "signer_public_key": "0354a481f0b9b4ac475ff4d64de1585128bfcb2dc546b654568aeba9e54301a57f",
             "transaction_ids": [
               "967e13d4ea672a8d9de7c6f80a374d4608abca0f5d61d33ee385be95f8e9caef031f968cc325d3fbd4a426157f4fc52f149bce8e2219dfc75e0d138939de0cc8",
               "19201a9969638f094a58c3a1102d608b0644d546beaf72afb5782bdaee27a02e5244ef673dbb4086a4d81e3fac13e0ea9500fdcc5eac6b99644f1adbc0f66e8c"
@@ -271,7 +271,7 @@
           "transactions": [
             {
               "header": {
-                "batcher_pubkey": "0354a481f0b9b4ac475ff4d64de1585128bfcb2dc546b654568aeba9e54301a57f",
+                "batcher_public_key": "0354a481f0b9b4ac475ff4d64de1585128bfcb2dc546b654568aeba9e54301a57f",
                 "dependencies": [],
                 "family_name": "dokchain_uuid",
                 "family_version": "0.0.1",
@@ -284,14 +284,14 @@
                 ],
                 "payload_encoding": "json",
                 "payload_sha512": "ca8caf5e490c9a22238c8fa0966ee5c5a53c3f8e1a4c69920fbe22c6e53fa8ff6b66047bd42d3ab14518eb42195ea77b4b437d8223f805dc0534fa3b7efca33d",
-                "signer_pubkey": "0354a481f0b9b4ac475ff4d64de1585128bfcb2dc546b654568aeba9e54301a57f"
+                "signer_public_key": "0354a481f0b9b4ac475ff4d64de1585128bfcb2dc546b654568aeba9e54301a57f"
               },
               "header_signature": "967e13d4ea672a8d9de7c6f80a374d4608abca0f5d61d33ee385be95f8e9caef031f968cc325d3fbd4a426157f4fc52f149bce8e2219dfc75e0d138939de0cc8",
               "payload": "eyJhY3Rpb24iOiAiQ1JFQVRFIiwgInV1aWQiOiAiOTgwMWE0MDItMzQxMy00MmM5LWI5YzQtMWEzNjM1ZWM1NzUzIiwgInNjb3BlIjogInNoYXJlX3JlcXVlc3QifQ=="
             },
             {
               "header": {
-                "batcher_pubkey": "0354a481f0b9b4ac475ff4d64de1585128bfcb2dc546b654568aeba9e54301a57f",
+                "batcher_public_key": "0354a481f0b9b4ac475ff4d64de1585128bfcb2dc546b654568aeba9e54301a57f",
                 "dependencies": [],
                 "family_name": "dokchain_recovery",
                 "family_version": "0.0.1",
@@ -308,7 +308,7 @@
                 ],
                 "payload_encoding": "json",
                 "payload_sha512": "02ce741f2d9c30ac45993a65420ee863feaf220075b9fe5869f1e886cd2c18bca212a761f37e51086410beab2f2b924c1a8bb59a94367504e5ee4b6d6d2fd7b3",
-                "signer_pubkey": "0354a481f0b9b4ac475ff4d64de1585128bfcb2dc546b654568aeba9e54301a57f"
+                "signer_public_key": "0354a481f0b9b4ac475ff4d64de1585128bfcb2dc546b654568aeba9e54301a57f"
               },
               "header_signature": "19201a9969638f094a58c3a1102d608b0644d546beaf72afb5782bdaee27a02e5244ef673dbb4086a4d81e3fac13e0ea9500fdcc5eac6b99644f1adbc0f66e8c",
               "payload": "eyJwcmV2aW91c19wdWJrZXkiOiAiMDM3ODM5ZjZjNjE1ZmMxZmZhMDA3OWE2YjFjOGY0ZDcxZjg1YTYxYWU1MDEwYWJjOTE4MmMzMGJmMTczNzAwMWExIiwgImFjdGlvbiI6ICJSRVFVRVNUX1NIQVJFIiwgInRydXN0ZWRfcGFydHlfcHVia2V5IjogIjAyMWE3YTY3OGRhMDBmY2Q2ZThiODk0N2I2ZmVhNDU0YTU4MDhkNmRkMzMyYzdhZDhiMzk4NzgwN2NmYjU4OGFlNiIsICJ0b2tlbl9pZCI6ICI5ODAxYTQwMi0zNDEzLTQyYzktYjljNC0xYTM2MzVlYzU3NTMifQ=="
@@ -324,7 +324,7 @@
         "block_num": 109,
         "consensus": "RGV2bW9kZQ==",
         "previous_block_id": "42e309b587b481b07b1678ef5204ef8e9951946bd6ade57da55f515ebacf1999523167a749953e06eba3ad90df00428f5824595f806b7c93c4f5d41643eadef4",
-        "signer_pubkey": "025e0bc40344926efe8ff84e9ce7af13cb0f42fdc8db69ba285f1c590a620b5faa",
+        "signer_public_key": "025e0bc40344926efe8ff84e9ce7af13cb0f42fdc8db69ba285f1c590a620b5faa",
         "state_root_hash": "84d4bfdc9f3f5ec23f69ba86885738a160b1376dd774d7ce7c444ee6b9b71262"
       },
       "header_signature": "ecb163b3c218c64f91b5fa00eaf60cf38cbf15174741b9b418bfbbd79a81418401d3527f4228d636be5096d1cee92eeae4d7fdf337fed5d6a3986ac8cb19a207"
@@ -333,7 +333,7 @@
       "batches": [
         {
           "header": {
-            "signer_pubkey": "0380d197e8afffa87c5e3f124b1e45b38a51cd200c17bc84a61757a7e3c8dba1d7",
+            "signer_public_key": "0380d197e8afffa87c5e3f124b1e45b38a51cd200c17bc84a61757a7e3c8dba1d7",
             "transaction_ids": [
               "8130ae6e6d7fdbe635d92a055d8969a4d4c7398731890b572dbc62464ed466e333dc3cd432cd93a95394ea0b8793f3405fe22816535c53c93213f7efdee4a088"
             ]
@@ -342,7 +342,7 @@
           "transactions": [
             {
               "header": {
-                "batcher_pubkey": "0380d197e8afffa87c5e3f124b1e45b38a51cd200c17bc84a61757a7e3c8dba1d7",
+                "batcher_public_key": "0380d197e8afffa87c5e3f124b1e45b38a51cd200c17bc84a61757a7e3c8dba1d7",
                 "dependencies": [],
                 "family_name": "dokchain_identity",
                 "family_version": "0.0.1",
@@ -356,7 +356,7 @@
                 ],
                 "payload_encoding": "json",
                 "payload_sha512": "da9e35fc090447719e2b423ccf27f9b3b4f74740089fb5a0a3491f35bf2e60833ff99a96383ceb27166f3769086b31c375780eca2abf7124a0d6dc78cf145caf",
-                "signer_pubkey": "0380d197e8afffa87c5e3f124b1e45b38a51cd200c17bc84a61757a7e3c8dba1d7"
+                "signer_public_key": "0380d197e8afffa87c5e3f124b1e45b38a51cd200c17bc84a61757a7e3c8dba1d7"
               },
               "header_signature": "8130ae6e6d7fdbe635d92a055d8969a4d4c7398731890b572dbc62464ed466e333dc3cd432cd93a95394ea0b8793f3405fe22816535c53c93213f7efdee4a088",
               "payload": "eyJhY3Rpb24iOiAiVkFMSURBVEUiLCAidGFyZ2V0IjogIjAzNTRhNDgxZjBiOWI0YWM0NzVmZjRkNjRkZTE1ODUxMjhiZmNiMmRjNTQ2YjY1NDU2OGFlYmE5ZTU0MzAxYTU3ZiIsICJzdWNjZXNzIjogdHJ1ZX0="
@@ -365,7 +365,7 @@
         },
         {
           "header": {
-            "signer_pubkey": "0380d197e8afffa87c5e3f124b1e45b38a51cd200c17bc84a61757a7e3c8dba1d7",
+            "signer_public_key": "0380d197e8afffa87c5e3f124b1e45b38a51cd200c17bc84a61757a7e3c8dba1d7",
             "transaction_ids": [
               "ad2e8a04ed93a83cff91d0690fe2cc75cda32cab7d690413aa8082a45e8b1aef318ea06d1f01d7d8cadababa30f09c5e15a6369df0bafb19be305f2ffaae9f43"
             ]
@@ -374,7 +374,7 @@
           "transactions": [
             {
               "header": {
-                "batcher_pubkey": "0380d197e8afffa87c5e3f124b1e45b38a51cd200c17bc84a61757a7e3c8dba1d7",
+                "batcher_public_key": "0380d197e8afffa87c5e3f124b1e45b38a51cd200c17bc84a61757a7e3c8dba1d7",
                 "dependencies": [],
                 "family_name": "dokchain_identity",
                 "family_version": "0.0.1",
@@ -388,7 +388,7 @@
                 ],
                 "payload_encoding": "json",
                 "payload_sha512": "6e785aed62d1bebd0c66340be2dcbee10d1751767d47d5fb631c0987ec7ae1a2fe649e6a0dbfeaece46c178045acd9026417e45e3e19c8e851ad7c4e3abf3b1c",
-                "signer_pubkey": "0380d197e8afffa87c5e3f124b1e45b38a51cd200c17bc84a61757a7e3c8dba1d7"
+                "signer_public_key": "0380d197e8afffa87c5e3f124b1e45b38a51cd200c17bc84a61757a7e3c8dba1d7"
               },
               "header_signature": "ad2e8a04ed93a83cff91d0690fe2cc75cda32cab7d690413aa8082a45e8b1aef318ea06d1f01d7d8cadababa30f09c5e15a6369df0bafb19be305f2ffaae9f43",
               "payload": "eyJjb25maWRlbmNlIjogIjAuOTYiLCAiYWN0aW9uIjogIlZFUklGSVkiLCAidGFyZ2V0IjogIjAzNTRhNDgxZjBiOWI0YWM0NzVmZjRkNjRkZTE1ODUxMjhiZmNiMmRjNTQ2YjY1NDU2OGFlYmE5ZTU0MzAxYTU3ZiIsICJwcmVjaXNpb24iOiAiMC4wMSJ9"
@@ -404,7 +404,7 @@
         "block_num": 108,
         "consensus": "RGV2bW9kZQ==",
         "previous_block_id": "dea9ad14d47ad3243377f348c46faa65ccb8f00011e00a5c45134d8c2cfca7db391f3e96726dffccb04b85050a4f1c8febf074e25cb2dbc859f7732f0fc114a1",
-        "signer_pubkey": "025e0bc40344926efe8ff84e9ce7af13cb0f42fdc8db69ba285f1c590a620b5faa",
+        "signer_public_key": "025e0bc40344926efe8ff84e9ce7af13cb0f42fdc8db69ba285f1c590a620b5faa",
         "state_root_hash": "3fc2371c666e112fa450e26015930c01fb610b3664a2a1398bb6c7ec73b52dd3"
       },
       "header_signature": "42e309b587b481b07b1678ef5204ef8e9951946bd6ade57da55f515ebacf1999523167a749953e06eba3ad90df00428f5824595f806b7c93c4f5d41643eadef4"
@@ -413,7 +413,7 @@
       "batches": [
         {
           "header": {
-            "signer_pubkey": "03ca1a111c11bcc9965ed96bc789419a058341956d38d477bd3e186ada476447fc",
+            "signer_public_key": "03ca1a111c11bcc9965ed96bc789419a058341956d38d477bd3e186ada476447fc",
             "transaction_ids": [
               "aeeb676f285411e5e188075beddecd736b26cf3e378ffd98afbd55e76f9ccd35098cd9d82242f30d041b55674d6978bef51b7adc9f9a86432c9046497c3d4f24"
             ]
@@ -422,7 +422,7 @@
           "transactions": [
             {
               "header": {
-                "batcher_pubkey": "03ca1a111c11bcc9965ed96bc789419a058341956d38d477bd3e186ada476447fc",
+                "batcher_public_key": "03ca1a111c11bcc9965ed96bc789419a058341956d38d477bd3e186ada476447fc",
                 "dependencies": [],
                 "family_name": "dokchain_offchain_data",
                 "family_version": "0.0.1",
@@ -437,7 +437,7 @@
                 ],
                 "payload_encoding": "json",
                 "payload_sha512": "012e68138dfe96bcef3c989b52c8ab0ae617459228fa57dfb01351e1c72a81d16db4d596d7c7c1962dd48b19f0b6b64a3792bd133f1bf5ae490e180a42564a12",
-                "signer_pubkey": "03ca1a111c11bcc9965ed96bc789419a058341956d38d477bd3e186ada476447fc"
+                "signer_public_key": "03ca1a111c11bcc9965ed96bc789419a058341956d38d477bd3e186ada476447fc"
               },
               "header_signature": "aeeb676f285411e5e188075beddecd736b26cf3e378ffd98afbd55e76f9ccd35098cd9d82242f30d041b55674d6978bef51b7adc9f9a86432c9046497c3d4f24",
               "payload": "eyJhY3Rpb24iOiAiUkVNT1ZFIiwgImNvcnJlbGF0aW9uX2lkIjogIjZlNjUzYTJlLTFjZWQtNDA1My04YWMyLWE3NDFkNjdjMjk5OCIsICJpdGVtIjogImFjY2Vzc19yZXNwb25zZSJ9"
@@ -452,7 +452,7 @@
         "block_num": 107,
         "consensus": "RGV2bW9kZQ==",
         "previous_block_id": "89fe971ddd9fd3c38f4e80bad5a393c8ebaafdb007d4a71289b18c96d732c89e0988cf363aad70cfa39579e31213bee6bddfdee92b3218f3fdb64759edb8dfcf",
-        "signer_pubkey": "025e0bc40344926efe8ff84e9ce7af13cb0f42fdc8db69ba285f1c590a620b5faa",
+        "signer_public_key": "025e0bc40344926efe8ff84e9ce7af13cb0f42fdc8db69ba285f1c590a620b5faa",
         "state_root_hash": "ad709998df0c4ac8b42ca86b936b020df6bc5a291e415b2b734dce3b34c86285"
       },
       "header_signature": "dea9ad14d47ad3243377f348c46faa65ccb8f00011e00a5c45134d8c2cfca7db391f3e96726dffccb04b85050a4f1c8febf074e25cb2dbc859f7732f0fc114a1"
@@ -461,7 +461,7 @@
       "batches": [
         {
           "header": {
-            "signer_pubkey": "03482144350176eca3bd365fcad0ca5a0be19fad000c0c29eaf119f095f9f53f51",
+            "signer_public_key": "03482144350176eca3bd365fcad0ca5a0be19fad000c0c29eaf119f095f9f53f51",
             "transaction_ids": [
               "d6a9d1bfedc0f2f93275dbc7f1a56dde2bb14201e7e3190a930833819ebc18c061b786bb7a422a836104db654daca3c3d4051dd94b253e7efb66e1e36c44512c"
             ]
@@ -470,7 +470,7 @@
           "transactions": [
             {
               "header": {
-                "batcher_pubkey": "03482144350176eca3bd365fcad0ca5a0be19fad000c0c29eaf119f095f9f53f51",
+                "batcher_public_key": "03482144350176eca3bd365fcad0ca5a0be19fad000c0c29eaf119f095f9f53f51",
                 "dependencies": [],
                 "family_name": "dokchain_offchain_data",
                 "family_version": "0.0.1",
@@ -485,7 +485,7 @@
                 ],
                 "payload_encoding": "json",
                 "payload_sha512": "c5ec018e9c462a3a8187cb4e09a2f05bd6c13c7c49fdaba25b2edac6d022241ce030098b4a385b6332dcc54caaf9a990ce45867d354d511c42666dff3faa2ad5",
-                "signer_pubkey": "03482144350176eca3bd365fcad0ca5a0be19fad000c0c29eaf119f095f9f53f51"
+                "signer_public_key": "03482144350176eca3bd365fcad0ca5a0be19fad000c0c29eaf119f095f9f53f51"
               },
               "header_signature": "d6a9d1bfedc0f2f93275dbc7f1a56dde2bb14201e7e3190a930833819ebc18c061b786bb7a422a836104db654daca3c3d4051dd94b253e7efb66e1e36c44512c",
               "payload": "eyJhY2Nlc3NfdG9rZW4iOiAiOWQxNTI3ODQxMzMxNmRjNjViY2EwNjZkZjMxOGQ4MzYwNDFkYWEzYzM0ZjE0YzdiZmI1OGM2NzgxNDhkNmU4ZmU0MjNiZDVlNWJiN2FkZDliYTdhYmRmZTQzM2NhNDcxMzU5MjNhMDU0NzY5OWI4MDUyNjU0Mjk5Y2U5NGQwNTVkNjg3YjcwYmZmYzdjZWVjOTY1ZWMxMjViNjgwYzNhYjczMTcyYmI5ZjdhYjk1MzMzYWMwMGU4NjEwMTk1YTQ2NGUyZmVmYjZkM2VlZWM0MzQ4YTE3NjFmNGUxZWQ3YTQxZGIzMjE1MGU5OTFmZGJiZjNkZmQ2MWExNGZiY2NmNzFkN2NjZjYwMjljMGNlMGYyMTA4OTE3YzYzMjYxZjhiYmVjY2E5OWVjZWQwNjg5ZGQ2OTdjZjRjZGI4YzAwOGI1OSIsICJ0YXJnZXQiOiAiMDNjYTFhMTExYzExYmNjOTk2NWVkOTZiYzc4OTQxOWEwNTgzNDE5NTZkMzhkNDc3YmQzZTE4NmFkYTQ3NjQ0N2ZjIiwgImNvcnJlbGF0aW9uX2lkIjogIjZlNjUzYTJlLTFjZWQtNDA1My04YWMyLWE3NDFkNjdjMjk5OCIsICJhY3Rpb24iOiAiQUNDRVNTX1JFU1BPTlNFIn0="
@@ -500,7 +500,7 @@
         "block_num": 106,
         "consensus": "RGV2bW9kZQ==",
         "previous_block_id": "792356f049433c5eaaa7405f460b38d9baeda80e810bec838f2a9c732ad1ddf4163f6c4da9bb83e94955b2e255f648d4a5753fd35cf5580cc2905acae1c43c3c",
-        "signer_pubkey": "025e0bc40344926efe8ff84e9ce7af13cb0f42fdc8db69ba285f1c590a620b5faa",
+        "signer_public_key": "025e0bc40344926efe8ff84e9ce7af13cb0f42fdc8db69ba285f1c590a620b5faa",
         "state_root_hash": "defc678352fe4701587955dffb0f05d5937418f2e566378e04304f86fc611560"
       },
       "header_signature": "89fe971ddd9fd3c38f4e80bad5a393c8ebaafdb007d4a71289b18c96d732c89e0988cf363aad70cfa39579e31213bee6bddfdee92b3218f3fdb64759edb8dfcf"
@@ -509,7 +509,7 @@
       "batches": [
         {
           "header": {
-            "signer_pubkey": "03ca1a111c11bcc9965ed96bc789419a058341956d38d477bd3e186ada476447fc",
+            "signer_public_key": "03ca1a111c11bcc9965ed96bc789419a058341956d38d477bd3e186ada476447fc",
             "transaction_ids": [
               "26817c0086d8449adfea93e88975c5aa8b8521791b9e0922a052e2eefb79f42f195696a6d025ecec65aeef8fa0a4ad008c1af7d5e2a366a40660121bd9586023",
               "4c3708faa9b9eb5f389e929fbc0d4fe659029462e55ec2a0f323456171c4b06216367c0da70e3f7a27eb6e7580f2e60310927d4cf1755df7c5686c0d132ba686"
@@ -519,7 +519,7 @@
           "transactions": [
             {
               "header": {
-                "batcher_pubkey": "03ca1a111c11bcc9965ed96bc789419a058341956d38d477bd3e186ada476447fc",
+                "batcher_public_key": "03ca1a111c11bcc9965ed96bc789419a058341956d38d477bd3e186ada476447fc",
                 "dependencies": [],
                 "family_name": "dokchain_uuid",
                 "family_version": "0.0.1",
@@ -532,14 +532,14 @@
                 ],
                 "payload_encoding": "json",
                 "payload_sha512": "c405a82df732178d4475f7f730a7260bc95a9b7ea00cd2dbddfe74e0eb98beea06a79feed039e21b8e5193ec923092858624d447812a5cc1212a2c64366be417",
-                "signer_pubkey": "03ca1a111c11bcc9965ed96bc789419a058341956d38d477bd3e186ada476447fc"
+                "signer_public_key": "03ca1a111c11bcc9965ed96bc789419a058341956d38d477bd3e186ada476447fc"
               },
               "header_signature": "26817c0086d8449adfea93e88975c5aa8b8521791b9e0922a052e2eefb79f42f195696a6d025ecec65aeef8fa0a4ad008c1af7d5e2a366a40660121bd9586023",
               "payload": "eyJhY3Rpb24iOiAiQ1JFQVRFIiwgInV1aWQiOiAiNmU2NTNhMmUtMWNlZC00MDUzLThhYzItYTc0MWQ2N2MyOTk4IiwgInNjb3BlIjogInJlcXVlc3RfYWNjZXNzIn0="
             },
             {
               "header": {
-                "batcher_pubkey": "03ca1a111c11bcc9965ed96bc789419a058341956d38d477bd3e186ada476447fc",
+                "batcher_public_key": "03ca1a111c11bcc9965ed96bc789419a058341956d38d477bd3e186ada476447fc",
                 "dependencies": [],
                 "family_name": "dokchain_offchain_data",
                 "family_version": "0.0.1",
@@ -558,7 +558,7 @@
                 ],
                 "payload_encoding": "json",
                 "payload_sha512": "1f357097072133330abd559636e75ffa50c9721d6217593f88b64a0873e5ba05ce516efc28f8d7be99ff3bd533bc6905da473a9c36ca456600cf3633ae5b82c1",
-                "signer_pubkey": "03ca1a111c11bcc9965ed96bc789419a058341956d38d477bd3e186ada476447fc"
+                "signer_public_key": "03ca1a111c11bcc9965ed96bc789419a058341956d38d477bd3e186ada476447fc"
               },
               "header_signature": "4c3708faa9b9eb5f389e929fbc0d4fe659029462e55ec2a0f323456171c4b06216367c0da70e3f7a27eb6e7580f2e60310927d4cf1755df7c5686c0d132ba686",
               "payload": "eyJ1cmkiOiAiUW1jWUtKaUp0QmI4SFlyZkZFcm11MWk0TFJmbUtHM29Ub01OSHNnZGthWDNWYyIsICJhY3Rpb24iOiAiUkVRVUVTVF9BQ0NFU1MiLCAidGFyZ2V0IjogIjAzNDgyMTQ0MzUwMTc2ZWNhM2JkMzY1ZmNhZDBjYTVhMGJlMTlmYWQwMDBjMGMyOWVhZjExOWYwOTVmOWY1M2Y1MSIsICJ2ZXJpZmllZF9pZCI6ICI0ZDg3Zjk1OC01ZjliLTRjM2MtYmIwZi0xNjFkY2Y1ODUxMGIiLCAiY29ycmVsYXRpb25faWQiOiAiNmU2NTNhMmUtMWNlZC00MDUzLThhYzItYTc0MWQ2N2MyOTk4In0="
@@ -573,7 +573,7 @@
         "block_num": 105,
         "consensus": "RGV2bW9kZQ==",
         "previous_block_id": "205e39f03ee5f96c818edb158888abeea5aa180c2b45e7682c074cfc69be7204581031482e96a4b29aa00c8e41640a28d6e099b17967fcea11d9ca1bd05b2508",
-        "signer_pubkey": "025e0bc40344926efe8ff84e9ce7af13cb0f42fdc8db69ba285f1c590a620b5faa",
+        "signer_public_key": "025e0bc40344926efe8ff84e9ce7af13cb0f42fdc8db69ba285f1c590a620b5faa",
         "state_root_hash": "1810ad07adbcf1cfff7ba55f118fecd9fae5ce74beaf3c751ffa6a71b5bbb01c"
       },
       "header_signature": "792356f049433c5eaaa7405f460b38d9baeda80e810bec838f2a9c732ad1ddf4163f6c4da9bb83e94955b2e255f648d4a5753fd35cf5580cc2905acae1c43c3c"
@@ -582,7 +582,7 @@
       "batches": [
         {
           "header": {
-            "signer_pubkey": "037839f6c615fc1ffa0079a6b1c8f4d71f85a61ae5010abc9182c30bf1737001a1",
+            "signer_public_key": "037839f6c615fc1ffa0079a6b1c8f4d71f85a61ae5010abc9182c30bf1737001a1",
             "transaction_ids": [
               "f5bafb96f565dc715e00acf8857a4721501527b689e7ebb9d4d7c77de6aeb3764a65b1b48ce7b4a476301e4942b5a21fb967c53e6c0057b123a40a9f1526b3c6"
             ]
@@ -591,7 +591,7 @@
           "transactions": [
             {
               "header": {
-                "batcher_pubkey": "037839f6c615fc1ffa0079a6b1c8f4d71f85a61ae5010abc9182c30bf1737001a1",
+                "batcher_public_key": "037839f6c615fc1ffa0079a6b1c8f4d71f85a61ae5010abc9182c30bf1737001a1",
                 "dependencies": [],
                 "family_name": "dokchain_offchain_data",
                 "family_version": "0.0.1",
@@ -606,7 +606,7 @@
                 ],
                 "payload_encoding": "json",
                 "payload_sha512": "5b77d9f4a542da865b06f9cd9dc2594de7edd6ed9cb4bc602c68bd55cb872a6fbdd43e4a73ddf7230a07a10c3fd9387bbe11e020708d6086da9c085a8afe2bd6",
-                "signer_pubkey": "037839f6c615fc1ffa0079a6b1c8f4d71f85a61ae5010abc9182c30bf1737001a1"
+                "signer_public_key": "037839f6c615fc1ffa0079a6b1c8f4d71f85a61ae5010abc9182c30bf1737001a1"
               },
               "header_signature": "f5bafb96f565dc715e00acf8857a4721501527b689e7ebb9d4d7c77de6aeb3764a65b1b48ce7b4a476301e4942b5a21fb967c53e6c0057b123a40a9f1526b3c6",
               "payload": "eyJhY3Rpb24iOiAiUkVNT1ZFIiwgImNvcnJlbGF0aW9uX2lkIjogImFiYjRkZWIzLTI4ODQtNDdmZC1iMzNhLWFmYzQ2OWZkOTEzMyIsICJpdGVtIjogImFjY2Vzc19yZXNwb25zZSJ9"
@@ -621,7 +621,7 @@
         "block_num": 104,
         "consensus": "RGV2bW9kZQ==",
         "previous_block_id": "91e351d1cd0cc3bd932307dcffe5ae210935cfa20b65c899c3a1fecc13b7dd0f4d080978c3685f084b112b298a82b0e62fe89425dad4afe7be49214f2cc5218c",
-        "signer_pubkey": "025e0bc40344926efe8ff84e9ce7af13cb0f42fdc8db69ba285f1c590a620b5faa",
+        "signer_public_key": "025e0bc40344926efe8ff84e9ce7af13cb0f42fdc8db69ba285f1c590a620b5faa",
         "state_root_hash": "f8b57ee4cd137978366d755aa606b3344568285b455295e165ca32e9831b71dd"
       },
       "header_signature": "205e39f03ee5f96c818edb158888abeea5aa180c2b45e7682c074cfc69be7204581031482e96a4b29aa00c8e41640a28d6e099b17967fcea11d9ca1bd05b2508"
@@ -630,7 +630,7 @@
       "batches": [
         {
           "header": {
-            "signer_pubkey": "03482144350176eca3bd365fcad0ca5a0be19fad000c0c29eaf119f095f9f53f51",
+            "signer_public_key": "03482144350176eca3bd365fcad0ca5a0be19fad000c0c29eaf119f095f9f53f51",
             "transaction_ids": [
               "adb42542b6ac6e677ad53411bb345dd9139f5248e0adb37c6dfae32792886352264c215ca11685791facc15e3e7c881a8ccdd8afbe5fb6803c0df61fde8dfe77"
             ]
@@ -639,7 +639,7 @@
           "transactions": [
             {
               "header": {
-                "batcher_pubkey": "03482144350176eca3bd365fcad0ca5a0be19fad000c0c29eaf119f095f9f53f51",
+                "batcher_public_key": "03482144350176eca3bd365fcad0ca5a0be19fad000c0c29eaf119f095f9f53f51",
                 "dependencies": [],
                 "family_name": "dokchain_offchain_data",
                 "family_version": "0.0.1",
@@ -654,7 +654,7 @@
                 ],
                 "payload_encoding": "json",
                 "payload_sha512": "ebb9d7dbc23ccee9e4fd991cbd46c40803596b921814fa383312e70acbe6f24c4f5d303cacedcf5848a7f962f18947b4c17deca3bfa149cdca6e179764497fee",
-                "signer_pubkey": "03482144350176eca3bd365fcad0ca5a0be19fad000c0c29eaf119f095f9f53f51"
+                "signer_public_key": "03482144350176eca3bd365fcad0ca5a0be19fad000c0c29eaf119f095f9f53f51"
               },
               "header_signature": "adb42542b6ac6e677ad53411bb345dd9139f5248e0adb37c6dfae32792886352264c215ca11685791facc15e3e7c881a8ccdd8afbe5fb6803c0df61fde8dfe77",
               "payload": "eyJhY2Nlc3NfdG9rZW4iOiAiYjQwOWZiMzQ5ZjRjZmZiNjZjYTQxMTc3ZWE0YmFiYmEwNDc1ZmYzMzJjNjJjNjNlNGM5YWEzNDBjZGQ4NTkwNTljMTliMzBmMjA0NWFjZWE1N2M0NzcyMDkxN2VhM2RiMmRlZjM0ZjI1MmQ4MzExNjRhMDJkYTVlYzFhMzEzY2Y4MWM2ODdhYjVmZmE1ZjZhZTdhZDBlYWYxNjk3OWE3NThjNDJjZjIyNWU3YjRlNTBjNzRiYzc3MjNhM2QzNDAyMjUxMjkyYWIzYjcwMzNiMDY0NGNlNDY1MzJhNjQyNjYyMmY5OGQ2M2ZhMTQ4NTA5ZTgzYTQ3ZTQxMmZmYzBmOTFmZmJhZTEwYmQ3YzgwNzFkZjRmM2M4ZjFlYjJjNTgwYTI2MDVkZTUyZWRiOGNkMmUyZjQzYWVlZTdmOWYwM2Q0MSIsICJ0YXJnZXQiOiAiMDM3ODM5ZjZjNjE1ZmMxZmZhMDA3OWE2YjFjOGY0ZDcxZjg1YTYxYWU1MDEwYWJjOTE4MmMzMGJmMTczNzAwMWExIiwgImNvcnJlbGF0aW9uX2lkIjogImFiYjRkZWIzLTI4ODQtNDdmZC1iMzNhLWFmYzQ2OWZkOTEzMyIsICJhY3Rpb24iOiAiQUNDRVNTX1JFU1BPTlNFIn0="
@@ -669,7 +669,7 @@
         "block_num": 103,
         "consensus": "RGV2bW9kZQ==",
         "previous_block_id": "3bc9873302ee96358c2874101aab1d499f032a6142705bfa79f6ad50e229bbd32e53fb2a6d91c44683466e68377c5815affbb9aef50c7fc6ac5712c5b11cf1ed",
-        "signer_pubkey": "025e0bc40344926efe8ff84e9ce7af13cb0f42fdc8db69ba285f1c590a620b5faa",
+        "signer_public_key": "025e0bc40344926efe8ff84e9ce7af13cb0f42fdc8db69ba285f1c590a620b5faa",
         "state_root_hash": "7ca69dc3be6e1ef5e819c160164304f5a33e3a47179abce97a799d2a4692295c"
       },
       "header_signature": "91e351d1cd0cc3bd932307dcffe5ae210935cfa20b65c899c3a1fecc13b7dd0f4d080978c3685f084b112b298a82b0e62fe89425dad4afe7be49214f2cc5218c"

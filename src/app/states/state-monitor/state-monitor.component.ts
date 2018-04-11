@@ -40,7 +40,7 @@ export class StateMonitorComponent implements OnInit, OnDestroy {
    * @param http {Http} - service for making HTTP requests
    */
   constructor(public http:Http) {}
-  
+
   // list of state deltas from addresses subscribed to
   @Input()
   states: object[];
@@ -158,9 +158,10 @@ export class StateMonitorComponent implements OnInit, OnDestroy {
 
     // message needs to include data
     if (!message['data']) return stateChanges;
-    
+
     // data from the message
     let messageData = JSON.parse(message['data']);
+    console.log(messageData);
     let stateChangeData = messageData['state_changes'];
 
     // if no state changes are included in the result, no need to report it

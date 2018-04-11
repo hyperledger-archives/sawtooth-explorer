@@ -31,15 +31,13 @@
             <div class="loader"></div>
           </ng-container>
 
-          <ng-container *ngIf="!loading">
-            <mat-paginator class="nav-paginator"
-              [length]="navTotalItems"
-              [pageSize]="navPageSize"
-              [pageIndex]="navPageIndex"
-              [pageSizeOptions]="navPageSizeOptions"
-              (page)="updateNavPaging($event)">
-            </mat-paginator>
+          <section class="view-select">
+            <mat-select [(ngModel)]="navPageSize" name="size" (change)="updateNavPaging({pageSize: navPageSize, pageIndex: 0})">
+              <mat-option *ngFor="let size of navPageSizeOptions" [value]="size">{{ size }} per page</mat-option>
+            </mat-select>
+          </section>
 
+          <ng-container *ngIf="!loading">
             <ng-container *ngIf="items && items.length">
               <dynamic-view-loader class="item"
                 [ngClass]="{'active': item === selectedItem}"
@@ -52,6 +50,11 @@
 
             <ng-container *ngIf="!items || !items.length">
               <p class="no-results">No {{ viewType }} to display.</p>
+            </ng-container>
+            <ng-container *ngIf="nextPosition">
+              <div class="list-item">
+                <button mat-button class="mat-raised-button full-width" (click)="nextPage()">Load Next {{navPageSize}}</button>
+              </div>
             </ng-container>
           </ng-container>
 

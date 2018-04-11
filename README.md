@@ -23,6 +23,8 @@ so the `apiUrl` is already set to `http://localhost:8090`. To change where the
 explorer connects to the rest api, change the value of `apiUrl` in
 `environments/environments.ts`.
 
+The minified and compiled web assets are also served at `http://localhost:8091`.
+
 ## Local development
 The `explorer` container is where you'll perform most development related
 functions, the container starts in serve mode, which will auto load changes. To

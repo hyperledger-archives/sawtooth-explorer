@@ -1,4 +1,4 @@
-# Copyright 2018 by Blockchain Technology Partners
+# Copyright 2018 PokitDok, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -11,17 +11,10 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-# -----------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 
-FROM node:6
+FROM node:6-onbuild
 
-COPY . /explorer
+RUN npm run build
 
-WORKDIR /explorer
-
-EXPOSE 4201
-
-RUN npm install -g @angular/cli@">=1.5.6 <2.0.0" node-sass
-RUN npm install
-
-CMD ./entrypoint.sh
+RUN mv dist ../

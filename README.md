@@ -16,7 +16,7 @@ Instructions for doing so are available in the Sawtooth documentation,
 under [Installing and Running Sawtooth](https://sawtooth.hyperledger.org/docs/core/releases/latest/app_developers_guide/installing_sawtooth.html).
 
 Once this is up and running, start the explorer container and rest api proxy
-container: `docker-compose up`
+container: `docker-compose -f docker-compose-dev.yaml up`
 
 By default, the sawtooth API proxy is available at port `8090`,
 so the `apiUrl` is already set to `http://localhost:8090`. To change where the

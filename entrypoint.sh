@@ -1,3 +1,4 @@
+#!/bin/bash
 # Copyright 2018 by Blockchain Technology Partners
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,15 +14,9 @@
 # limitations under the License.
 # -----------------------------------------------------------------------------
 
-FROM node:6
+if [ "${SAWTOOTH_REST_API}" ] ; then
+  sed -i "s|localhost|${SAWTOOTH_REST_API}|g" src/environments/environment.ts
+fi
 
-COPY . /explorer
-
-WORKDIR /explorer
-
-EXPOSE 4201
-
-RUN npm install -g @angular/cli@">=1.5.6 <2.0.0" node-sass
-RUN npm install
-
-CMD ./entrypoint.sh
+ng build
+ng serve --host=0.0.0.0 --port=4201

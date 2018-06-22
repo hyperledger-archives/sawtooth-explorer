@@ -8,7 +8,7 @@ Blockchain for Node Operators.
 SawtoothExplorer is built using [Angular](https://angular.io/) and
 [Angular Material](https://material.angular.io/). The project is managed using
 the [Angular CLI](https://cli.angular.io/). To run the project, you'll need
-[Docker](https://docker/com).
+[Docker](https://docker.com/).
 
 ## Getting Started
 Before starting the SawtoothExplorer app, have the API running locally.

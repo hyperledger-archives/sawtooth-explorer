@@ -65,5 +65,5 @@
 
 <h3 class="h3">Payload</h3>
 
-<pre [innerHTML]="payloadJSON" class="ace-editor"></pre>
+<pre [innerHTML]="payloadJSON | base64decode" class="ace-editor"></pre>
 

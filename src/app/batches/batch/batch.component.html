@@ -33,11 +33,6 @@
 <ng-container *ngIf="showDataAsJSON">
   <h4 class="h4">Payload</h4>
 
-  <div ace-editor
-       [text]="jsonData"
-       [mode]="aceMode"
-       [theme]="'twilight'"
-       [options]="options"
-       [readOnly]="false"
-       class="ace-editor"></div>
+
+<pre [innerHTML]="jsonData" class="ace-editor"></pre>
 </ng-container>

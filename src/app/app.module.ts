@@ -83,8 +83,7 @@ import { Base64DecodePipe } from './pipes/base64-decode/base64-decode.pipe';
     DataTableComponent,
     DynamicViewDirective,
     DynamicViewLoaderComponent,
-    Base64DecodePipe,
-    UIAceDataTransformPipe
+    Base64DecodePipe
   ],
   imports: [
     BrowserModule,

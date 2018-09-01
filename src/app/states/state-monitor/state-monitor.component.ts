@@ -60,12 +60,17 @@ export class StateMonitorComponent implements OnInit, OnDestroy {
   webSocketUrl = environment.apiURL.replace(/^(https?):\/\//, 'ws:') + '/subscriptions';
 
   ngOnInit() {
+    let addresses = localStorage.getItem('addresses');
+    if(addresses){
+      addresses = JSON.parse(addresses);
+    }
     this.states = [];
-    this.addresses = [];
+    this.addresses = addresses;
   }
 
   ngOnDestroy() {
     this.closeWebsocket();
+    localStorage.setItem('addresses', JSON.stringify(this.addresses));
   }
 
   @HostListener('window:unload', ['$event'])

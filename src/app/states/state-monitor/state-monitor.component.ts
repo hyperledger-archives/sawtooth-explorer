@@ -60,12 +60,13 @@ export class StateMonitorComponent implements OnInit, OnDestroy {
   webSocketUrl = environment.apiURL.replace(/^(https?):\/\//, 'ws:') + '/subscriptions';
 
   ngOnInit() {
-    let addresses = localStorage.getItem('addresses');
-    if(addresses){
-      addresses = JSON.parse(addresses);
+    let addressJson: string[] = [];
+    const addressesString: string = localStorage.getItem('addresses');
+    if(addressesString){
+      addressJson = JSON.parse(addressesString);
     }
     this.states = [];
-    this.addresses = addresses;
+    this.addresses = addressJson;
   }
 
   ngOnDestroy() {

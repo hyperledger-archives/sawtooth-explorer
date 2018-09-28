@@ -1,0 +1,55 @@
+apiVersion: v1
+items:
+# core
+- apiVersion: v1
+  kind: ImageStream
+  metadata:
+    labels:
+      app: explorer
+      build: ng-server
+    name: ng-server
+  spec:
+    lookupPolicy:
+      local: false
+  status:
+    dockerImageRepository: ""
+- apiVersion: v1
+  kind: BuildConfig
+  metadata:
+    labels:
+      app: explorer
+      build: ng-server
+    name: ng-server
+  spec:
+    nodeSelector: null
+    output:
+      to:
+        kind: ImageStreamTag
+        name: ng-server:latest
+    postCommit: {}
+    resources: {}
+    runPolicy: Serial
+    source:
+      git:
+        uri: https://github.com/MakeCents-NYC/sawtooth-explorer
+        ref: master
+      sourceSecret:
+        name: github
+      type: Git
+    strategy:
+      dockerStrategy:
+        env:
+        - name: gittoken
+          valueFrom:
+            secretKeyRef:
+              name: csgittoken
+              key: "password"
+        noCache: true
+      type: Docker
+    triggers:
+    - type: ConfigChange
+  status:
+    lastVersion: 0
+kind: List
+metadata: {}
+

@@ -13,7 +13,21 @@
 # limitations under the License.
 # ------------------------------------------------------------------------------
 
-FROM node:6-onbuild
+FROM ubuntu:xenial
+
+RUN apt update && apt install -y \
+    git \
+    curl \
+    nginx
+
+# Install Node.js 6.x repository
+RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
+
+# Install Node.js and npm
+RUN apt-get install -y nodejs && apt update
+
+EXPOSE 80
+
 
 RUN \
  if [ ! -z $HTTP_PROXY ] && [ -z $http_proxy ]; then \
@@ -29,6 +43,20 @@ RUN \
   npm config set https-proxy $https_proxy; \
  fi;
 
-RUN npm run build
+WORKDIR /app
 
-RUN mv dist ../
+RUN git clone http://github.com/MakeCents-NYC/sawtooth-explorer .
+
+RUN npm install
+#COPY . /app
+
+#RUN cd /project
+
+RUN npm run build -prod
+
+# clean up the rest?
+
+RUN mkdir /www/ste
+
+RUN mv dist /www/ste/
+

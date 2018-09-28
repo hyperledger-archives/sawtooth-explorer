@@ -20,13 +20,16 @@ RUN apt update && apt install -y \
     curl \
     nginx
 
+RUN rm /etc/nginx/sites-enabled/default
+RUN ln -sf /dev/stdout /var/log/nginx/access.log \
+    && ln -sf /dev/stderr /var/log/nginx/error.log
+EXPOSE 80 443
+
 # Install Node.js 6.x repository
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
 
 # Install Node.js and npm
 RUN apt-get install -y nodejs && apt update
-
-EXPOSE 80
 
 
 RUN \

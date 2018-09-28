@@ -6,8 +6,8 @@ items:
   metadata:
     labels:
       app: explorer
-      build: ng-server
-    name: ng-server
+      build: explorer
+    name: explorer
   spec:
     lookupPolicy:
       local: false
@@ -18,14 +18,14 @@ items:
   metadata:
     labels:
       app: explorer
-      build: ng-server
-    name: ng-server
+      build: explorer
+    name: explorer
   spec:
     nodeSelector: null
     output:
       to:
         kind: ImageStreamTag
-        name: ng-server:latest
+        name: explorer:latest
     postCommit: {}
     resources: {}
     runPolicy: Serial

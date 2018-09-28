@@ -54,9 +54,10 @@ RUN npm install
 
 RUN npm run build -prod
 
-# clean up the rest?
+RUN mkdir /www
 
 RUN mkdir /www/ste
+# clean up the rest?
 
 RUN mv dist /www/ste/
 

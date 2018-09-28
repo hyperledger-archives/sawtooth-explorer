@@ -1,0 +1,130 @@
+apiVersion: v1
+kind: Template
+metadata:
+   name: mcexplorer
+   annotations:
+     description: "Deploys a sawtooth explorer app for makecents."
+     message: "A an explorer has been created!"
+parameters:
+- name: NAMESPACE
+  displayName: "Namespace"
+  description: "The namespace to deploy Sawtooth to. You should generally set this to your namespace"
+  value: ""
+  required: true
+- name: SAWTOOTH_API_ADDR
+  description: "Name of the service account used by Sawtooth"
+  value: sawtooth
+- name: VOLUME_SIZE
+  description: "Size of the Sawtooth data volume"
+  value: 1Gi
+objects:
+
+# service that makes it possible to lookup this individual sawtooth, necessary for seeding new nodes.
+- apiVersion: v1
+  kind: Service
+  metadata:
+    name: ${NODE_NAME}
+  spec:
+    type: ClusterIP
+    selector:
+      app: ${NODE_NAME}
+    ports:
+      - name: comp-4004
+        port: 4004
+        protocol: TCP
+        targetPort: 4004
+      - name: gossip-8800
+        port: 8800
+        protocol: TCP
+        targetPort: 8800
+      - name: rest-8080
+        port: 8080
+        protocol: TCP
+        targetPort: 8080
+      - name: rest-8008
+        port: 8008
+        protocol: TCP
+        targetPort: 8008
+
+# Ephemereal set of validator and components
+# Essential for creating new chain.
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    name: ng-server
+    labels:
+      app: explorer
+  spec:
+    restartPolicy: Never
+    containers:
+    - name: ng-app
+      env:
+            SELENIUM_ADDRESS: http://selenium:4444/wd/hub
+      SELENIUM_HOST: selenium
+      TEST_WEB_HOST: ng-server
+      BASE_URL: http://ng-server:4200
+      NG_DOCKER_COMPOSE: "true"
+      - name: SELENIUM_ADDRESS
+        value: http://selenium:4444/wd/hub
+      - name: SELENIUM_HOST
+        value: selenium
+      - name: TEST_WEB_HOST
+        value: ng-server
+      - name: POD_NAMESPACE
+        valueFrom:
+          fieldRef:
+            fieldPath: metadata.namespace
+      - name: CONFIG_DIR
+        value: ${CONFIG_DIR}
+      - name: SAWTOOTH_NODE_ADDRESS
+        value: ${POD_NAME}.$(NODE_NAME).${POD_NAMESPACE}.${SVC_NAME}
+      command: [ "bash" ]
+      args:
+        - -c
+        - 'npm run start -- --host 0.0.0.0 --port 4200'
+      image: docker-registry.default.svc:5000/tommling/ng-server:latest
+      imagePullPolicy: IfNotPresent
+#      volumeMounts:
+#      - name: validator-storage
+#        mountPath: /var/lib/sawtooth
+#      - name: validator-config
+#        mountPath: /etc/sawtooth/
+#      - name: validator-keys
+#        mountPath: /etc/sawtooth/keys
+#        readOnly: true
+      ports:
+      - name: proxy-4200
+        containerPort: 4200
+        protocol: TCP
+
+    - name: chronoshift-engine
+      command: [ "bash" ]
+      args:
+      - -c
+      - 'cs-engine --connect tcp://$HOSTNAME:5005 --component tcp://$HOSTNAME:4004 -vvv'
+      image: nginx:latest
+      volumeMounts:
+      - name: validator-keys
+        mountPath: /etc/sawtooth/keys
+        readOnly: true
+      - name: validator-storage
+        mountPath: /var/lib/sawtooth
+
+
+    triggers:
+      - type: "ConfigChange"
+
+
+#    volumes:
+#    - name: validator-config
+#      configMap:
+#        name: ${NODE_NAME}-config
+#    - name: validator-storage
+#      emptyDir: {}
+#    - name: validator-keys
+#      secret:
+#        secretName: ${NODE_NAME}-validator-keys
+#
+#      - ./:/usr/src/app
+#      - /usr/src/app/node_modules
+#      - dist-html:/usr/src/dist

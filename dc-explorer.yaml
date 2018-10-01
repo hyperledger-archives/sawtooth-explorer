@@ -1,0 +1,31 @@
+kind: "DeploymentConfig"
+apiVersion: "v1"
+metadata:
+  name: "frontend"
+spec:
+  template:
+    metadata:
+      labels:
+        name: "explorer"
+    spec:
+      containers:
+        - name: "explorer"
+          image: "docker-registry.default.svc:5000/tommling/explorer:latest"
+          command: [ "nginx" ]
+          args:
+            - -g
+            - 'daemon off;'
+          ports:
+            - containerPort: 8090
+              protocol: "TCP"
+            - containerPort: 8091
+              protocol: "TCP"
+  replicas: 1
+  triggers:
+    - type: "ConfigChange"
+  strategy:
+    type: "Rolling"
+  paused: false
+  revisionHistoryLimit: 2
+  minReadySeconds: 0
+

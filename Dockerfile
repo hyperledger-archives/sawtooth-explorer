@@ -19,7 +19,6 @@ RUN apt update && apt install -y \
     git \
     curl
 
-RUN add-apt-repository -y ppa:nginx/stable
 RUN apt-get update
 RUN apt-get install -y nginx
 RUN rm -rf /var/lib/apt/lists/*

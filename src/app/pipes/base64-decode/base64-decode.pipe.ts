@@ -42,7 +42,7 @@ export class Base64DecodePipe implements PipeTransform {
     // attempt to decode from base64 if needed
     if (base64Regex.test(value)) {
       try {
-        decodedValue = atob(value);
+        decodedValue = decodeURIComponent(escape(atob(value)));
       } catch(e) {
       }
     }

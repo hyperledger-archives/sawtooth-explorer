@@ -20,3 +20,6 @@ declare var module: NodeModule;
 interface NodeModule {
   id: string;
 }
+
+// https://github.com/Microsoft/TypeScript/issues/8639
+declare function escape(s:string): string;

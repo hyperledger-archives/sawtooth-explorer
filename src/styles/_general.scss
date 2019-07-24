@@ -280,6 +280,30 @@ dl.detail-dl {
   height: 40vh;
   width: 100%;
   margin-bottom: 16px;
+  overflow: scroll;
+  background: #000;
+  color: #FFF;
+}
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0px 0px 3px black;
+  border-radius: 15px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 15px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 p.id {

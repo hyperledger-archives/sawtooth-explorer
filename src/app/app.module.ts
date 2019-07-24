@@ -28,11 +28,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule, MatSelectModule, MatPaginatorModule, MatTabsModule, MatTableModule,
   MatInputModule, MatButtonModule, MatIconModule, MatListModule, MatSnackBarModule } from '@angular/material';
 
-/* ACE EDITOR IMPORTS */
-import { AceEditorDirective } from 'ng2-ace';
-import 'brace/theme/twilight';
-import 'brace/mode/json';
-
 /* MAIN PAGES */
 import { ExplorerComponent } from './explorer/explorer.component';
 
@@ -68,8 +63,6 @@ import { APIService } from './services/api-service/api.service';
 import { DynamicViewDirective } from './dynamic-views/dynamic-view-directive/dynamic-view.directive';
 import { DynamicViewLoaderComponent } from './dynamic-views/dynamic-view-loader/dynamic-view-loader.component';
 import { Base64DecodePipe } from './pipes/base64-decode/base64-decode.pipe';
-import { UIAceDataTransformPipe } from './pipes/ui-ace-data-transform/ui-ace-data-transform.pipe';
-
 
 @NgModule({
   declarations: [
@@ -88,11 +81,9 @@ import { UIAceDataTransformPipe } from './pipes/ui-ace-data-transform/ui-ace-dat
     StateMonitorComponent,
     StateComponent,
     DataTableComponent,
-    AceEditorDirective,
     DynamicViewDirective,
     DynamicViewLoaderComponent,
-    Base64DecodePipe,
-    UIAceDataTransformPipe
+    Base64DecodePipe
   ],
   imports: [
     BrowserModule,

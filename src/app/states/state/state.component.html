@@ -28,10 +28,4 @@
 
 <h3 class="h3">Change</h3>
 
-<div ace-editor
-  [text]="payloadJSON"
-  [mode]="aceMode"
-  [theme]="'twilight'"
-  [options]="aceOptions"
-  [readOnly]="false"
-  class="ace-editor"></div>
+<pre [innerHTML]="payloadJSON" class="ace-editor"></pre>

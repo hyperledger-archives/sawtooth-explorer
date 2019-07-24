@@ -17,7 +17,7 @@
 # specific language governing permissions and limitations
 # under the License.
 
-FROM node:8
+FROM node:6
 
 COPY . /explorer
 

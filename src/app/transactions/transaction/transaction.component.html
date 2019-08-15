@@ -65,10 +65,5 @@
 
 <h3 class="h3">Payload</h3>
 
-<div ace-editor
-   [text]="payloadJSON"
-   [mode]="aceMode"
-   [theme]="'twilight'"
-   [options]="aceOptions"
-   [readOnly]="false"
-   class="ace-editor"></div>
+<pre [innerHTML]="payloadJSON | base64decode" class="ace-editor"></pre>
+

@@ -17,8 +17,7 @@
 
 import { Component, Input, OnInit, OnChanges } from '@angular/core';
 import { Base64DecodePipe } from '../../pipes/base64-decode/base64-decode.pipe';
-import { UIAceDataTransformPipe } from
-  '../../pipes/ui-ace-data-transform/ui-ace-data-transform.pipe';
+
 
 /**
  * A component that formats all the data associated with a transaction for
@@ -31,7 +30,7 @@ import { UIAceDataTransformPipe } from
     './transaction.component.scss',
     '../../../styles/shared/_explorer-detail.scss'
   ],
-  providers: [Base64DecodePipe, UIAceDataTransformPipe]
+  providers: [Base64DecodePipe]
 })
 export class TransactionComponent implements OnInit, OnChanges {
 
@@ -41,14 +40,11 @@ export class TransactionComponent implements OnInit, OnChanges {
   // data stringified for Angular UI Ace to display
   payloadJSON = '{}';
 
-  // set default UI Ace display to show as plain text (no syntax highlighting)
-  aceMode = 'text';
-
   /**
    * @param uiAceDataTransformPipe {UIAceDataTransformPipe} - used to transform
    * data into a format displayable by Angular UI Ace
    */
-  constructor(private uiAceDataTransformPipe: UIAceDataTransformPipe) {}
+  constructor() {}
 
   // ngOnInit needed in addition to ngOnChanges because when this view is
   // dynamically loaded as a component, ngOnInit fires, but ngOnChanges doesn't.
@@ -67,20 +63,7 @@ export class TransactionComponent implements OnInit, OnChanges {
    * @param payloadData - data representing the payload within a transaction
    */
   updatePayloadData(payloadData: any): void {
-    // format payload for Angular UI Ace
-    let formatRes = this.getFormatData(payloadData);
-    this.payloadJSON = formatRes.data;
-    this.aceMode = formatRes.aceDisplayMode;
+    this.payloadJSON = payloadData;
   }
 
-  /**
-   * Gets formatting information needed for a transaction payload to be
-   * displayed in string form.
-   * @param payloadData - data representing the payload within a transaction
-   * @returns {object} formatted transaction payload data
-   */
-  getFormatData(payloadData: any): any {
-    let formatResult = this.uiAceDataTransformPipe.parseForUIAce(payloadData);
-    return formatResult;
-  }
 }

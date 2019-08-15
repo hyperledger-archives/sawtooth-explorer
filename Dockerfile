@@ -25,7 +25,7 @@ WORKDIR /explorer
 
 EXPOSE 4201
 
-RUN npm install -g @angular/cli@">=1.5.6 <2.0.0" node-sass --registry=https://registry.npm.taobao.org \
- && npm install --registry=https://registry.npm.taobao.org
+RUN npm install -g @angular/cli@">=1.5.6 <2.0.0" node-sass \
+ && npm install
 
 CMD [ "./entrypoint.sh" ]

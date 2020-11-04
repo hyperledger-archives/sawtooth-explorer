@@ -1,5 +1,7 @@
 #!/bin/bash
 
-sed -e "s/{{EXPLORER_HOST}}/$EXPLORER_HOST/g" /etc/nginx/nginx.conf.tpl > /etc/nginx/nginx.conf
+sed -e "s/host.docker.internal:8008/$SAWTOOTH_REST/g" /etc/nginx/nginx.conf.tpl > /etc/nginx/nginx.conf
 
-nginx -g "daemon off;" 
+find /www/ste -type f -name '*.js' -exec sed -i "s/localhost:8090/$SAWTOOTH_EXPLORER_PROXY/g" {} \;
+
+nginx -g "daemon off;"

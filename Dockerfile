@@ -15,7 +15,7 @@ RUN npm run build
 
 FROM nginx:1.19.3
 
-COPY ./docker/nginx.conf.tpl /etc/nginx/nginx.conf.tpl
+COPY ./docker/nginx.conf /etc/nginx/nginx.conf.tpl
 COPY ./docker/start.sh /app/start.sh
 
 COPY --from=build /app/dist /www/ste

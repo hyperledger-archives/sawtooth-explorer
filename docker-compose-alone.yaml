@@ -9,8 +9,8 @@ services:
       - "8091:8091"
     # command: [nginx, '-g', 'daemon off;']
     environment:
-      - EXPLORER_HOST=rest-api:8008      
-
+      - SAWTOOTH_REST=rest-api:8008      
+      - SAWTOOTH_EXPLORER_PROXY=localhost:8090  #Should point to this server port 8090
 
 networks:
   default:

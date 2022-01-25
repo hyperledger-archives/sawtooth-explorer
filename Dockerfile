@@ -1,34 +1,23 @@
-# Copyright 2018 PokitDok, Inc.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-# ------------------------------------------------------------------------------
+FROM node:10 as build
 
-FROM node:6-onbuild
+WORKDIR /app
 
-RUN \
- if [ ! -z $HTTP_PROXY ] && [ -z $http_proxy ]; then \
-  http_proxy=$HTTP_PROXY; \
- fi; \
- if [ ! -z $HTTPS_PROXY ] && [ -z $https_proxy ]; then \
-  https_proxy=$HTTPS_PROXY; \
- fi; \
- if [ ! -z $http_proxy ]; then \
-  npm config set proxy $http_proxy; \
- fi; \
- if [ ! -z $https_proxy ]; then \
-  npm config set https-proxy $https_proxy; \
- fi;
+COPY ./package*.json ./
 
-RUN npm run build
+RUN npm install --loglevel verbose 
 
-RUN mv dist ../
+COPY ./src ./src
+COPY ./*.json ./
+
+RUN npm run build 
+
+
+
+FROM nginx:1.19.3
+
+COPY ./docker/nginx.conf /etc/nginx/nginx.conf.tpl
+COPY ./docker/start.sh /app/start.sh
+
+COPY --from=build /app/dist /www/ste
+
+CMD ["sh", "-c", "/app/start.sh"] 

@@ -23,7 +23,7 @@
     "@angular/platform-browser": "5.0.1",
     "@angular/platform-browser-dynamic": "5.0.1",
     "@angular/router": "5.0.1",
-    "@types/lodash": "^4.14.85",
+    "@types/lodash": "4.14.49",
     "angular2-moment": "1.7.0",
     "core-js": "2.5.1",
     "crypto-js": "3.1.9-1",

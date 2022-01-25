@@ -1,0 +1,18 @@
+version: "2.1"
+
+services:
+  sawtooth-explorer:
+    image: le999/sawtooth-explorer:0.0.1
+    container_name: sawtooth-explorer
+    ports:
+      - "8090:8090"
+      - "8091:8091"
+    # command: [nginx, '-g', 'daemon off;']
+    environment:
+      - SAWTOOTH_REST=rest-api:8008      
+      - SAWTOOTH_EXPLORER_PROXY=localhost:8090  #Should point to this server port 8090
+
+networks:
+  default:
+    external:
+      name: docker-compose_default
